@@ -23,6 +23,13 @@
     URL.revokeObjectURL(url);
   }
 
+  function sortPlayersAlphabetically() {
+    if (!Array.isArray(app.players)) return;
+    app.players.sort((a, b) => String(a.name ?? '').localeCompare(String(b.name ?? ''), undefined, {
+      sensitivity: 'base',
+    }));
+  }
+
   function syncEventsAmountLimit() {
     const playerCount = app.players.length;
     eventsAmountInput.max = String(playerCount);
@@ -36,7 +43,7 @@
 
   function setupCollection({
     name, input, uuidInput, addButton, clearButton, deleteButton, list, field, label,
-    emptyText, descriptionInput = null,
+    emptyText, descriptionInput = null, allowReorder = false,
   }) {
     function setAddButtonIcon(isEditing) {
       const icon = document.createElement('i');
@@ -80,7 +87,7 @@
         return;
       }
 
-      entries.forEach((entry) => {
+      entries.forEach((entry, index) => {
         const item = document.createElement('li');
         item.className = 'settings-list-item';
         const text = document.createElement('span');
@@ -99,6 +106,43 @@
 
         const actions = document.createElement('div');
         actions.className = 'nav-actions';
+
+        if (allowReorder) {
+          const moveUpButton = document.createElement('button');
+          const moveUpIcon = document.createElement('i');
+          moveUpIcon.className = 'fa-solid fa-arrow-up';
+          moveUpButton.appendChild(moveUpIcon);
+          moveUpButton.type = 'button';
+          moveUpButton.disabled = index === 0;
+          moveUpButton.setAttribute('aria-label', `Move ${label.toLowerCase()} up`);
+          moveUpButton.title = `Move ${label.toLowerCase()} up`;
+          moveUpButton.addEventListener('click', () => {
+            if (index === 0) return;
+            const targetIndex = index - 1;
+            [app[name][index], app[name][targetIndex]] = [app[name][targetIndex], app[name][index]];
+            app.persistCollection(name);
+            render();
+          });
+
+          const moveDownButton = document.createElement('button');
+          const moveDownIcon = document.createElement('i');
+          moveDownIcon.className = 'fa-solid fa-arrow-down';
+          moveDownButton.appendChild(moveDownIcon);
+          moveDownButton.type = 'button';
+          moveDownButton.disabled = index === entries.length - 1;
+          moveDownButton.setAttribute('aria-label', `Move ${label.toLowerCase()} down`);
+          moveDownButton.title = `Move ${label.toLowerCase()} down`;
+          moveDownButton.addEventListener('click', () => {
+            if (index === entries.length - 1) return;
+            const targetIndex = index + 1;
+            [app[name][index], app[name][targetIndex]] = [app[name][targetIndex], app[name][index]];
+            app.persistCollection(name);
+            render();
+          });
+
+          actions.append(moveUpButton, moveDownButton);
+        }
+
         const editButton = document.createElement('button');
         const editIcon = document.createElement('i');
         editIcon.classList = "fa-solid fa-pen-to-square";
@@ -143,6 +187,9 @@
         app[name].push(entry);
       }
 
+      if (name === 'players') {
+        sortPlayersAlphabetically();
+      }
       app.persistCollection(name);
       if (name === 'players') syncEventsAmountLimit();
       resetEditor();
@@ -153,6 +200,9 @@
       const uuid = uuidInput.value.trim();
       if (!uuid || !app[name].some((entry) => entry.id === uuid)) return;
       app[name] = app[name].filter((entry) => entry.id !== uuid);
+      if (name === 'players') {
+        sortPlayersAlphabetically();
+      }
       app.persistCollection(name);
       if (name === 'players') syncEventsAmountLimit();
       resetEditor();
@@ -203,10 +253,13 @@
         app.replaceCollection(name, data[name]);
       }
     }
+    sortPlayersAlphabetically();
+    app.persistCollection('players');
     renderSettings();
   }
 
   function renderSettings() {
+    sortPlayersAlphabetically();
     syncEventsAmountLimit();
     eventsAmountInput.min = '1';
     eventsAmountInput.step = '1';
@@ -222,6 +275,7 @@
     resetSettingsBtn.title = 'Reset settings';
 
     saveSettingsBtn.addEventListener('click', () => {
+      sortPlayersAlphabetically();
       downloadJson('dreams-and-disasters-settings.json', {
         settings: app.settings,
         players: app.players,
@@ -280,7 +334,7 @@
       addButton: document.getElementById('add-rule'),
       clearButton: document.getElementById('clear-rule'),
       deleteButton: document.getElementById('delete-rule'), list: document.getElementById('rules-list'),
-      field: 'value', label: 'Rule', emptyText: 'No rules yet.',
+      field: 'value', label: 'Rule', emptyText: 'No rules yet.', allowReorder: true,
     });
     setupCollection({
       name: 'events', input: document.getElementById('event-name-input'),
