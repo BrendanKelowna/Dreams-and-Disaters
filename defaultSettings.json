@@ -1,0 +1,118 @@
+{
+  "settings": {
+    "eventsAmount": 2
+  },
+  "players": [
+    {
+      "id": "8f19d50b-c504-4718-b065-c2daac2a12b3",
+      "name": "Carlton Reilly"
+    },
+    {
+      "id": "aed82da4-49b8-44fb-a6f9-ea25a3db3059",
+      "name": "Bernard Carlson"
+    },
+    {
+      "id": "e7a32e10-177a-4e8b-8414-451acabaf8df",
+      "name": "Milton Waters"
+    },
+    {
+      "id": "0b2c47f1-7860-438c-8b38-e276891e74c9",
+      "name": "Otis Frey"
+    },
+    {
+      "id": "dab5fe39-bc4e-4e94-baab-39d908fe8009",
+      "name": "Chang Frederick"
+    },
+    {
+      "id": "a5ad0c20-2c9f-4a3b-87cb-c5267d0e1622",
+      "name": "Chauncey Brennan"
+    },
+    {
+      "id": "cb4d1cc7-4bca-4168-9f15-d731da5d0153",
+      "name": "Natasha Clarke"
+    },
+    {
+      "id": "d3b34c27-758f-4bb3-bb40-5ea0b2e5102b",
+      "name": "Summer Gardner"
+    },
+    {
+      "id": "68ecdd58-d871-4b85-9e7d-b07018dcabe5",
+      "name": "Jarred Parker"
+    },
+    {
+      "id": "821c8863-f97a-4a09-9176-4421e9a3d62d",
+      "name": "Ralph Bartlett"
+    }
+  ],
+  "rules": [
+    {
+      "id": "2efd87bc-31fc-4993-9eae-bd3644b76877",
+      "value": "Good luck, have fun, dont die"
+    },
+    {
+      "id": "dd4999d0-44ed-4ed0-966b-b451a73e2f08",
+      "value": "Each child cost 5% of income, minimun $5,000"
+    },
+    {
+      "id": "8e5618cf-984d-4e64-9cbf-455cb48a601a",
+      "value": "You can choose to live at home until you are 25, then you are kicked out"
+    },
+    {
+      "id": "6c0306cb-7db3-4b55-b8ac-c9a801a43ec4",
+      "value": "Minum wage jobs are 100% succesful, $5 over minum wage roll 7-12, above that first roll 12 is succesful, next roll 11-12 is succesful ect... and must always have the education"
+    },
+    {
+      "id": "801102b3-72df-4c2c-a38c-e0fb864f5879",
+      "value": "Savings 5% , debt -8% , morage -3%, annualy"
+    },
+    {
+      "id": "12c40d72-97de-4d31-8bc7-8a2a42f4ac3c",
+      "value": "Married income 125%"
+    },
+    {
+      "id": "0d908334-6ffd-43e9-8391-7b98e4a997ed",
+      "value": "min car cost $5,000, public transit free"
+    },
+    {
+      "id": "0de151bb-4b93-436a-9809-572ac25058b5",
+      "value": "post secondary $30,000 annualy"
+    }
+  ],
+  "events": [
+    {
+      "id": "51038a30-838f-408a-bbaf-59651a1b8051",
+      "title": "Car crash",
+      "description": "Watch out!. 2-6 = Your car is totaled, add half your cars value to your savings"
+    },
+    {
+      "id": "c8fe65e8-7c89-407b-8a7c-0d49239660f3",
+      "title": "Lottory win",
+      "description": "You win the lottory. Add 1,000x your roll to your savings"
+    },
+    {
+      "id": "639ee479-eec6-4eef-bfe8-1ea5e0da819a",
+      "title": "In the know",
+      "description": "You have connections to a job, 4-12 = Your hired!. 2-3 = you still dont get the job."
+    },
+    {
+      "id": "db1b65b0-7fef-48c1-a2e3-d59c14fe00ed",
+      "title": "Oops a baby",
+      "description": "Positive!, 2-6 = Add 1 baby. 7-12 = Choose if you want to keep it"
+    },
+    {
+      "id": "032cb17f-3fb8-43cf-af8e-ad61bc73b508",
+      "title": "Cheater!",
+      "description": "Your partner catches you, 2-6 = Devorce. 7-12 = You went to councaling and worked it out"
+    },
+    {
+      "id": "7e8dc360-cc38-4fe0-b703-c8cc23487471",
+      "title": "Job loss",
+      "description": "Your job is doing layoffs, 2-6 = You get layed off, no income this year. 7-12 = You dont get laied off"
+    },
+    {
+      "id": "f3dcad3a-c7de-49aa-b7af-050eb1c1431f",
+      "title": "Tripped",
+      "description": "You trip over a slightly raised peace of concreat. 2-6 = -75% income this year, your on disablility this year. 7-12 = tis but a scratch"
+    }
+  ]
+}

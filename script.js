@@ -1,106 +1,177 @@
-const STORAGE_KEY = 'dreamsAndDisastersNames';
-const STORAGE_KEY_SETTINGS = 'dreamsAndDisastersSettings';
-const STORAGE_KEY_RULES = 'dreamsAndDisastersRules';
-const STORAGE_KEY_EVENTS = 'dreamsAndDisastersEvents';
+const STORAGE_KEYS = {
+  settings: 'dreamsAndDisastersSettings',
+  players: 'dreamsAndDisastersPlayers',
+  rules: 'dreamsAndDisastersRules',
+  events: 'dreamsAndDisastersEvents',
+  histories: 'dreamsAndDisastersHistories',
+};
 
-window.DreamsAndDisasters = window.DreamsAndDisasters || {};
-window.DreamsAndDisasters.names = window.DreamsAndDisasters.names || [];
-window.DreamsAndDisasters.settings = window.DreamsAndDisasters.settings || {};
-window.DreamsAndDisasters.rules = window.DreamsAndDisasters.rules || [];
-window.DreamsAndDisasters.events = window.DreamsAndDisasters.events || [];
+const FALLBACK_DEFAULTS = {
+  settings: { eventsPerRound: 2 },
+  players: [],
+  rules: [],
+  events: [],
+};
 
-const names = window.DreamsAndDisasters.names;
-const settings = window.DreamsAndDisasters.settings;
-const rules = window.DreamsAndDisasters.rules;
-const events = window.DreamsAndDisasters.events;
+const app = window.DreamsAndDisasters || {};
+app.settings = app.settings || {};
+app.players = Array.isArray(app.players) ? app.players : [];
+app.rules = Array.isArray(app.rules) ? app.rules : [];
+app.events = Array.isArray(app.events) ? app.events : [];
+app.histories = Array.isArray(app.histories) ? app.histories : [];
+window.DreamsAndDisasters = app;
 
 function loadNav() {
-  fetch("nav.html")
-    .then(response => response.text())
-    .then(data => {
-      document.getElementById("nav").innerHTML = data;
-    });
-};
+  const nav = document.getElementById('nav');
+  if (!nav) return;
+
+  fetch('nav.html')
+    .then((response) => {
+      if (!response.ok) throw new Error(`Navigation request failed: ${response.status}`);
+      return response.text();
+    })
+    .then((html) => { nav.innerHTML = html; })
+    .catch((error) => console.error('Failed to load navigation:', error));
+}
+
 loadNav();
 
-function normalizeNameEntry(entry) {
-  if (typeof entry === 'string') {
-    return {
-      name: entry.trim(),
-      events: '',
-    };
+function readStoredJson(key, fallback) {
+  try {
+    const stored = localStorage.getItem(key);
+    return stored === null ? fallback : JSON.parse(stored);
+  } catch (error) {
+    console.error(`Failed to read ${key} from localStorage:`, error);
+    return fallback;
   }
+}
 
+function writeStoredJson(key, value) {
+  try {
+    localStorage.setItem(key, JSON.stringify(value));
+    return true;
+  } catch (error) {
+    console.error(`Failed to save ${key} to localStorage:`, error);
+    return false;
+  }
+}
+
+function createId() {
+  return window.crypto?.randomUUID?.() || `${Date.now()}-${Math.random().toString(16).slice(2)}`;
+}
+
+function normalizeSettings(value, defaultSettings = {}) {
+  const eventAmount = Number(value?.eventsAmount ?? value?.eventsPerRound ??
+    defaultSettings.eventsAmount ?? defaultSettings.eventsPerRound ?? 2);
   return {
-    name: typeof entry?.name === 'string' ? entry.name.trim() : '',
-    events: typeof entry?.events === 'string' ? entry.events.trim() : '',
+    eventsAmount: Number.isFinite(eventAmount) ? Math.max(1, Math.floor(eventAmount)) : 2,
   };
 }
 
-function readNames() {
+function normalizePlayer(player) {
+  if (typeof player === 'string') player = { name: player };
+  if (!player || typeof player !== 'object') return null;
+  const name = String(player.name ?? player.value ?? '').trim();
+  return name ? { id: String(player.id || createId()), name } : null;
+}
+
+function normalizeRule(rule) {
+  if (typeof rule === 'string') rule = { value: rule };
+  if (!rule || typeof rule !== 'object') return null;
+  const value = String(rule.value ?? rule.name ?? '').trim();
+  return value ? { id: String(rule.id || createId()), value } : null;
+}
+
+function normalizeEvent(event) {
+  if (typeof event === 'string') event = { title: event };
+  if (!event || typeof event !== 'object') return null;
+  const title = String(event.title ?? event.name ?? event.value ?? '').trim();
+  if (!title) return null;
+  return {
+    id: String(event.id || createId()),
+    title,
+    description: String(event.description ?? event.discription ?? ''),
+  };
+}
+
+function normalizeHistory(history) {
+  if (!history || typeof history !== 'object' || !Array.isArray(history.value)) return null;
+  const value = history.value
+    .filter((result) => result && typeof result === 'object')
+    .map((result) => ({
+      player: String(result.player ?? ''),
+      event: String(result.event ?? ''),
+      roll: Math.min(12, Math.max(2, Math.floor(Number(result.roll) || 2))),
+    }));
+  return { id: String(history.id || createId()), value };
+}
+
+const normalizers = {
+  players: normalizePlayer,
+  rules: normalizeRule,
+  events: normalizeEvent,
+  histories: normalizeHistory,
+};
+
+function replaceCollection(name, values) {
+  if (!normalizers[name] || !Array.isArray(values)) return false;
+  const normalized = values.map(normalizers[name]).filter(Boolean);
+  app[name].splice(0, app[name].length, ...normalized);
+  return writeStoredJson(STORAGE_KEYS[name], app[name]);
+}
+
+app.persistCollection = (name) => {
+  if (!STORAGE_KEYS[name] || name === 'settings') return false;
+  return writeStoredJson(STORAGE_KEYS[name], app[name]);
+};
+
+app.replaceCollection = replaceCollection;
+
+app.updateSettings = (values) => {
+  Object.assign(app.settings, normalizeSettings({ ...app.settings, ...values }));
+  return writeStoredJson(STORAGE_KEYS.settings, app.settings);
+};
+
+app.resetConfiguration = () => {
+  const defaults = app.defaults || FALLBACK_DEFAULTS;
+  Object.assign(app.settings, normalizeSettings({}, defaults.settings));
+  writeStoredJson(STORAGE_KEYS.settings, app.settings);
+  replaceCollection('players', defaults.players || []);
+  replaceCollection('rules', defaults.rules || []);
+  replaceCollection('events', defaults.events || []);
+};
+
+app.ready = (async () => {
+  let defaults = FALLBACK_DEFAULTS;
   try {
-    const saved = JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]');
-    const parsed = Array.isArray(saved) ? saved.map(normalizeNameEntry) : [];
-    names.length = 0;
-    parsed.filter((person) => person.name).forEach((person) => names.push(person));
+    const response = await fetch('defaultSettings.json');
+    if (!response.ok) throw new Error(`Defaults request failed: ${response.status}`);
+    defaults = await response.json();
   } catch (error) {
-    console.error('Failed to read names from localStorage:', error);
-    names.length = 0;
+    console.warn('Using built-in defaults:', error);
   }
-}
 
-function writeNames() {
-  localStorage.setItem(STORAGE_KEY, JSON.stringify(names));
-}
+  app.defaults = {
+    settings: normalizeSettings({}, defaults.settings),
+    players: (Array.isArray(defaults.players) ? defaults.players : []).map(normalizePlayer).filter(Boolean),
+    rules: (Array.isArray(defaults.rules) ? defaults.rules : []).map(normalizeRule).filter(Boolean),
+    events: (Array.isArray(defaults.events) ? defaults.events : []).map(normalizeEvent).filter(Boolean),
+  };
 
-function readSettings() {
-  try {
-    const saved = JSON.parse(localStorage.getItem(STORAGE_KEY_SETTINGS) || '{}');
-    Object.assign(settings, {
-      'roll-irl': saved['roll-irl'] || false,
-      'players-choosen': saved['players-choosen'] || 1,
-      'events-amount': saved['events-amount'] || 1,
-    });
-  } catch (error) {
-    console.error('Failed to read settings from localStorage:', error);
-    settings['roll-irl'] = false;
-    settings['players-choosen'] = 1;
-    settings['events-amount'] = 1;
+  Object.assign(app.settings, normalizeSettings(
+    readStoredJson(STORAGE_KEYS.settings, app.defaults.settings), app.defaults.settings,
+  ));
+
+  for (const name of ['players', 'rules', 'events', 'histories']) {
+    const fallback = name === 'histories' ? [] : app.defaults[name];
+    const saved = readStoredJson(STORAGE_KEYS[name], fallback);
+    const values = Array.isArray(saved) ? saved : fallback;
+    app[name].splice(0, app[name].length, ...values.map(normalizers[name]).filter(Boolean));
   }
-}
 
-function writeSettings() {
-  localStorage.setItem(STORAGE_KEY_SETTINGS, JSON.stringify(settings));
-}
-
-function readRules() {
-  try {
-    const saved = JSON.parse(localStorage.getItem(STORAGE_KEY_RULES) || '[]');
-    const parsed = Array.isArray(saved) ? saved.filter((r) => typeof r === 'string' && r.trim()) : [];
-    rules.length = 0;
-    parsed.forEach((rule) => rules.push(rule));
-  } catch (error) {
-    console.error('Failed to read rules from localStorage:', error);
-    rules.length = 0;
+  writeStoredJson(STORAGE_KEYS.settings, app.settings);
+  for (const name of ['players', 'rules', 'events', 'histories']) {
+    writeStoredJson(STORAGE_KEYS[name], app[name]);
   }
-}
-
-function writeRules() {
-  localStorage.setItem(STORAGE_KEY_RULES, JSON.stringify(rules));
-}
-
-function readEvents() {
-  try {
-    const saved = JSON.parse(localStorage.getItem(STORAGE_KEY_EVENTS) || '[]');
-    const parsed = Array.isArray(saved) ? saved.filter((d) => typeof d === 'string' && d.trim()) : [];
-    events.length = 0;
-    parsed.forEach((event) => events.push(event));
-  } catch (error) {
-    console.error('Failed to read events from localStorage:', error);
-    events.length = 0;
-  }
-}
-
-function writeEvents() {
-  localStorage.setItem(STORAGE_KEY_EVENTS, JSON.stringify(events));
-}
+  return app;
+})();

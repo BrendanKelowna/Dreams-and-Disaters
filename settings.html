@@ -2,81 +2,122 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dreams and Disasters - Settings</title>
-    <link rel="stylesheet" href="style.css" />
-    <script src="script.js" defer></script>
-    <script src="scriptSettings.js" defer></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dreams and Disasters - Settings</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+  <script src="script.js" defer></script>
+  <script src="scriptSettings.js" defer></script>
 </head>
 
 <body>
-    <div id="nav"></div>
-    <main class="app">
-        <h1>Dreams and Disasters - Settings</h1>
-        <section class="panel">
-            <div class="description" id="helpDescription" hidden>
-                <div class="help-header">
-                    <p><small>Changes are saved to cache. Cache can be cleared so export your data to backup when done
-                            setting up.</small></p>
-                    <button id="closeHelpBtn" type="button" class="secondary">Close</button>
-                </div>
-            </div>
+  <nav id="nav"></nav>
+  <main class="app">
+    <div class="header pv2">
+      <h1 class="m0">Settings</h1>
+      <div class="nav-actions">
+        <button id="save-settings" type="button" value="Save Settings"
+          title="Export settings" aria-label="Export settings"><i
+            class="fa-solid fa-floppy-disk" aria-hidden="true"></i></button>
+        <button id="open-settings" type="button" value="Open Settings"
+          title="Import settings" aria-label="Import settings"><i
+            class="fa-solid fa-folder" aria-hidden="true"></i></button>
+        <button class="bg-danger" id="reset-settings" type="button"
+          value="Reset to Default" title="Reset settings"
+          aria-label="Reset settings"><i class="fa-solid fa-arrow-rotate-left"
+            aria-hidden="true"></i></button>
+      </div>
+    </div>
 
-            <div class="button-container">
-                <button id="addNameBtn" type="button">Save</button>
-                <button id="loadNamesBtn" type="button" class="secondary">Refresh</button>
-                <div class="export-tooltip-wrap">
-                    <button id="exportBtn" type="button" class="secondary">Export</button>
-                    <div class="export-tooltip">
-                        <small>Changes are saved to cache. Cache can be cleared so export your data to backup when done
-                            setting up.</small>
-                    </div>
-                </div>
-                <button id="importBtn" type="button" class="secondary">Import</button>
-                <input id="importInput" type="file" accept=".csv,text/csv" hidden />
-                <button id="defaults" type="button" value="Reset to defaults" class="secondary">Reset to
-                    defaults</button>
-            </div>
-        </section>
-        <section class="panel">
-            <h2>General</h2>
-            <div class="input-container item sb row">
-                <label for="roll-irl">Roll in real life</label>
-                <input id="roll-irl" type="checkbox" />
-            </div>
-            <div class="input-container item sb row">
-                <label for="events-amount">Events per round</label>
-                <input id="events-amount" type="number" />
-            </div>
+    <section class="panel">
+      <div class="header">
+        <h2>General</h2>
+      </div>
+      <div class="input-container">
+        <label for="events-amount">Events per round:</label>
+        <input id="events-amount" type="number" min="1" step="1" />
+      </div>
+    </section>
 
-        </section>
-
-        <section class="panel">
-            <h2>Players</h2>
-            <div class="input-container">
-                <label for="nameInput">Name</label>
-                <input id="nameInput" type="text" placeholder="Enter a name" />
-            </div>
-            <ul id="nameList" class="name-list settings-list"></ul>
-        </section>
-        <section class="panel">
-            <h2>Rules</h2>
-            <div class="input-container">
-                <label for="rulesInput">Rule</label>
-                <input id="rulesInput" type="text" placeholder="Enter rules" />
-            </div>
-            <ul id="rulesList" class="rules-list settings-list"></ul>
-        </section>
-        <section class="panel">
-            <h2> Events</h2>
-            <div class="input-container">
-                <label for="eventsInput">Events</label>
-                <input id="eventsInput" type="text" placeholder="Enter events" />
-            </div>
-            <ul id="eventsList" class="events-list settings-list"></ul>
-        </section>
-    </main>
+    <section class="panel">
+      <div class="header">
+        <h2>Players</h2>
+        <div class="nav-actions">
+          <button id="add-player" type="button" value="Add Player"
+            title="Add player" aria-label="Add player"><i
+              class="fa-solid fa-plus" aria-hidden="true"></i></button>
+          <button class="bg-warning" id="clear-player" type="button"
+            value="Clear Player" title="Clear player inputs"
+            aria-label="Clear player inputs"><i class="fa-solid fa-broom"
+              aria-hidden="true"></i></button>
+          <button class="bg-danger" id="delete-player" type="button"
+            value="Delete Player" title="Delete selected player"
+            aria-label="Delete selected player"><i class="fa-solid fa-trash"
+              aria-hidden="true"></i></button>
+        </div>
+      </div>
+      <div class="input-container">
+        <label for="name-input">Name:</label>
+        <input id="name-input" type="text" placeholder="Enter a name" />
+        <input id="name-uuid" type="hidden" />
+      </div>
+      <ul id="name-list" class="name-list settings-list"></ul>
+    </section>
+    <section class="panel">
+      <div class="header">
+        <h2>Rules</h2>
+        <div class="nav-actions">
+          <button id="add-rule" type="button" value="Add Rule" title="Add rule"
+            aria-label="Add rule"><i class="fa-solid fa-plus"
+              aria-hidden="true"></i></button>
+          <button class="bg-warning" id="clear-rule" type="button"
+            value="Clear Rule" title="Clear rule inputs"
+            aria-label="Clear rule inputs"><i class="fa-solid fa-broom"
+              aria-hidden="true"></i></button>
+          <button class="bg-danger" id="delete-rule" type="button"
+            value="Delete Rule" title="Delete selected rule"
+            aria-label="Delete selected rule"><i class="fa-solid fa-trash"
+              aria-hidden="true"></i></button>
+        </div>
+      </div>
+      <div class="input-container">
+        <label for="rules-input">Rule:</label>
+        <input id="rules-input" type="text" placeholder="Enter rules" />
+        <input id="rule-uuid" type="hidden" />
+      </div>
+      <ul id="rules-list" class="rules-list settings-list"></ul>
+    </section>
+    <section class="panel">
+      <div class="header">
+        <h2>Events</h2>
+        <div class="nav-actions">
+          <button id="add-event" type="button" value="Add Event"
+            title="Add event" aria-label="Add event"><i class="fa-solid fa-plus"
+              aria-hidden="true"></i></button>
+          <button class="bg-warning" id="clear-event" type="button"
+            value="Clear Event" title="Clear event inputs"
+            aria-label="Clear event inputs"><i class="fa-solid fa-broom"
+              aria-hidden="true"></i></button>
+          <button class="bg-danger" id="delete-event" type="button"
+            value="Delete Event" title="Delete selected event"
+            aria-label="Delete selected event"><i class="fa-solid fa-trash"
+              aria-hidden="true"></i></button>
+        </div>
+      </div>
+      <div class="input-container">
+        <label for="event-name-input">Name:</label>
+        <input id="event-name-input" type="text"
+          placeholder="Enter an event name" />
+        <label for="event-description-input">Description:</label>
+        <textarea id="event-description-input" rows="3"
+          placeholder="Describe the event"></textarea>
+        <input id="event-uuid" type="hidden" />
+      </div>
+      <ul id="events-list" class="events-list settings-list"></ul>
+    </section>
+  </main>
 </body>
 
 </html>

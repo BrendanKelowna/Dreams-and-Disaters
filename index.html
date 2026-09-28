@@ -6,43 +6,70 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Dreams and Disasters</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
   <script src="script.js" defer></script>
   <script src="scriptHome.js" defer></script>
 </head>
 
 <body>
-  <div id="nav"></div>
+  <nav id="nav"></nav>
   <main class="app">
-    <div class="header row sb ac pv2">
-      <h1 class="m0">Dreams and Disasters</h1><button id="dl-sheet" class="secondary">Download player sheet</button>
+    <div class="header sb ac pv2 fw">
+      <h1 class="m0">Dreams & Disasters</h1>
+      <div class="nav-actions">
+        <button id="save" type="button" title="Export history"
+          aria-label="Export history"><i class="fa-solid fa-floppy-disk"
+            aria-hidden="true"></i></button>
+        <button id="open" type="button" title="Import history"
+          aria-label="Import history"><i class="fa-solid fa-folder"
+            aria-hidden="true"></i></button>
+        <button id="roll" type="button" value="Roll" title="Roll a round"
+          aria-label="Roll a round"><i class="fa-solid fa-dice"></i></button>
+        <button id="new-game" class="bg-danger rel" type="button"
+          title="New game" aria-label="New game">
+          <i class="fa-solid fa-gamepad rel" style=" z-index: 7;"></i>
+          <i class="fa-solid fa-star abs"
+            style="color:#ffff0088; top: 4px; right: 7px; z-index: 8;"></i>
+        </button>
+      </div>
     </div>
-    <section class="panel">
-      <div>
-        <h2>Play</h2>
+    <section id="play-area" class="panel">
+      <div class="title-container">
       </div>
-      <div class="play-container">
-        <div class="item g1 stack">
-          <h3> Players choosen</h3>
-          <button id="playerRoll" type="button" value="Roll">Roll</button>
-        </div>
-        <div class="item g1 stack">
-          <h3>Events</h3>
-          <button id="eventRoll" type="button" value="Roll">Roll</button>
-        </div>
-        <div class="item g1 stack">
-          <h3>Roll</h3>
-          <button id="diceRoll" type="button" value="Roll">Roll</button>
-        </div>
+      <div id="play-header" class="play-container">
+        <h2> Player</h2>
+        <h2>Event</h2>
+        <h2>Roll</h2>
       </div>
-      <h2> History</h2>
+      <div id="play-container" class="play-container">
+        <li class="text-light">Roll...</li>
+      </div>
+      <ul id="histories-pagination" class="pagination m0 p0">
+        <li class="left"><button class="pagination-button" type="button"
+            title="Previous round" aria-label="Previous round">&lt;</button>
+        </li>
+        <li class="right"><button class="pagination-button" type="button"
+            title="Next round" aria-label="Next round">&gt;</button></li>
+      </ul>
+
     </section>
     <section class="panel">
-      <h2>Players</h2>
-      <ul id="nameList" class="name-list"></ul>
+      <div class="title-container">
+        <h2>Players</h2>
+      </div>
+      <ul id="players-list" class="list">
+        <li class="text-light">Loading...</li>
+      </ul>
     </section>
     <section class="panel">
-      <h2>Rules</h2>
-      <ul id="rulesList" class="rules-list"></ul>
+      <div class="title-container">
+        <h2>Rules</h2>
+      </div>
+      <ul id="rules-list" class="list">
+        <li class="text-light">Loading...</li>
+      </ul>
+    </section>
   </main>
 </body>
 
