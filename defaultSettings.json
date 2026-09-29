@@ -4,469 +4,1033 @@
   },
   "players": [
     {
-      "id": "aed82da4-49b8-44fb-a6f9-ea25a3db3059",
+      "id": "f9872e64-30b6-4d99-8861-7465b7c532e3",
       "name": "Bernard Carlson"
     },
     {
-      "id": "8f19d50b-c504-4718-b065-c2daac2a12b3",
+      "id": "a9ea0967-b711-4714-8e79-8a779bc5a867",
       "name": "Carlton Reilly"
     },
     {
-      "id": "dab5fe39-bc4e-4e94-baab-39d908fe8009",
+      "id": "b8452642-8a98-4b57-a9aa-36d8e33faab3",
       "name": "Chang Frederick"
     },
     {
-      "id": "a5ad0c20-2c9f-4a3b-87cb-c5267d0e1622",
+      "id": "d18a2d39-758e-40d5-8a7e-3556e23b47d0",
       "name": "Chauncey Brennan"
     },
     {
-      "id": "68ecdd58-d871-4b85-9e7d-b07018dcabe5",
+      "id": "3ce9ce9a-e4c2-4f2d-ad1a-50a56bc3c3b0",
       "name": "Jarred Parker"
     },
     {
-      "id": "e7a32e10-177a-4e8b-8414-451acabaf8df",
+      "id": "9675bb9b-ed8c-4c94-bdb4-544c8e74c9dd",
       "name": "Milton Waters"
     },
     {
-      "id": "cb4d1cc7-4bca-4168-9f15-d731da5d0153",
+      "id": "67c2fe7e-6222-41de-ad13-7a1b57325012",
       "name": "Natasha Clarke"
     },
     {
-      "id": "0b2c47f1-7860-438c-8b38-e276891e74c9",
+      "id": "9cfaca95-4414-4809-9133-1428be623e01",
       "name": "Otis Frey"
     },
     {
-      "id": "821c8863-f97a-4a09-9176-4421e9a3d62d",
+      "id": "c2e68910-2619-4500-b320-7532ee3c444c",
       "name": "Ralph Bartlett"
     },
     {
-      "id": "d3b34c27-758f-4bb3-bb40-5ea0b2e5102b",
+      "id": "a0d054ac-8ad0-4424-a44c-308b546330dd",
       "name": "Summer Gardner"
     }
   ],
   "rules": [
     {
-      "id": "dd4999d0-44ed-4ed0-966b-b451a73e2f08",
+      "id": "41a99cfe-f2bf-444d-94ec-ee3eb6996a2e",
       "title": "General",
-      "description": "Rules are guidelines; players may choose differently if they can justify it."
+      "description": "Roll dice, make choices, no regrets. Rules are guidelines; players may choose differently if they can justify it."
     },
     {
-      "id": "8e5618cf-984d-4e64-9cbf-455cb48a601a",
+      "id": "086d68d0-d47d-45b9-906a-6979921b92e1",
       "title": "Yearly order",
-      "description": "Calculate income > marriage > tax > personal expenses > rent/mortgage > other expenses > debt. Add what's left to savings or debt."
+      "description": "Generate events → Calculate income → Marriage → Tax and personal expenses → Rent/mortgage → Other expenses → Debt. Add what's left to savings or debt → Calculate savings and debt accumulation"
     },
     {
-      "id": "6c0306cb-7db3-4b55-b8ac-c9a801a43ec4",
+      "id": "3c91c92e-d11d-4907-9af7-af2086f645ff",
       "title": "Minimum-wage job",
       "description": "$38,000/year; automatic success."
     },
     {
-      "id": "801102b3-72df-4c2c-a38c-e0fb864f5879",
-      "title": "Advanced job",
-      "description": "Roll 4-6 to earn $50,000/year."
+      "id": "dbd9f7e8-fa53-48ca-976a-a1490b22ae41",
+      "title": "Advanced Minimum-wage job",
+      "description": "Roll 6 to earn $48,000/year."
     },
     {
-      "id": "12c40d72-97de-4d31-8bc7-8a2a42f4ac3c",
+      "id": "a3e86bd2-dc1b-46e6-8ea1-caa80f5f8838",
       "title": "Career job",
-      "description": "Roll 4-6 to get the job. Required education must be completed."
+      "description": "Roll a 1 or 6 to get the job. Required education must be completed."
     },
     {
-      "id": "0d908334-6ffd-43e9-8391-7b98e4a997ed",
+      "id": "536765b3-b5b5-48e9-858a-d8810252c1f5",
       "title": "Work and school",
       "description": "Until age 25, you may have full-time work or school plus part-time work or school."
     },
     {
-      "id": "0de151bb-4b93-436a-9809-572ac25058b5",
+      "id": "9d040d30-bebb-415f-9730-a557aa359cf7",
       "title": "Marriage income",
-      "description": "Married players increase their combined income by 25% (multiply by 1.25)."
+      "description": "Married players increase their combined income by 25% (income x 1.25)."
     },
     {
-      "id": "3023a0da-ca38-4277-ab55-f7c9d53a4134",
-      "title": "Personal expenses",
-      "description": "Pay 20% of after-tax income for food, phone, insurance, gas, and other personal expenses (multiply remaining income by 0.8)."
+      "id": "38dfb24a-a47e-472c-886f-9d81e72aa2f2",
+      "title": "Taxes and Personal expenses",
+      "description": "25% Taxes and 35% Personal expenses (food, phone, insurance, gas... etc) of income (Just add the percent to make it easy) (income x .4)"
     },
     {
-      "id": "51bb2bdb-cca7-4f35-8beb-79bb34b0dfb8",
+      "id": "bc056e93-8494-4130-9ed6-63034ff758de",
       "title": "Children",
-      "description": "Each child costs $8,000/year."
+      "description": "Each child costs $8,000/year for 18 years."
     },
     {
-      "id": "ae6255bf-f08c-4401-968f-24d5891c2a7a",
+      "id": "7304610d-1b8c-4b20-b773-3397083246d2",
       "title": "Living at home",
       "description": "You may live at home until age 23."
     },
     {
-      "id": "09283d86-d5be-48aa-ac32-bfa4a154bf3a",
+      "id": "9f9c9a97-3d2c-45e0-a33f-15825540a588",
       "title": "Rent",
-      "description": "$14,400/year ($1,200/month)."
+      "description": "$15,000/year ($1,250/month)."
     },
     {
-      "id": "525c4856-2920-422f-92ef-1fe7bd749a92",
+      "id": "b67404dc-73b8-41e9-922f-15c4342c08a0",
       "title": "Home purchase",
       "description": "The minimum down payment is 15%."
     },
     {
-      "id": "47ccd688-e4e8-4374-b0c2-f848f999454b",
-      "title": "Home prices",
+      "id": "2149f85d-07fa-45bf-9315-bf203fe8114a",
+      "title": "Home prices guideline",
       "description": "Condo: $575,000; townhouse: $835,000; detached: $1,100,000."
     },
     {
-      "id": "f1030cde-9fd5-47d3-8655-72fedb87239a",
+      "id": "bddd1d40-e51e-49fe-92de-33c5dfc7573e",
       "title": "Mortgage",
-      "description": "Maximum 25 years at 0% annual interest. Calculate annual payments as (house price âˆ’ down payment) / payment years."
+      "description": "Maximum 25 years at 0% annual interest. Calculate annual payments as (house price - down payment) / payment years."
     },
     {
-      "id": "32230175-6adf-4bf9-9ffc-96c91a58e75b",
+      "id": "84a04ec0-acb1-49f2-babc-dcd4b6dcc152",
       "title": "Transportation",
-      "description": "Public transit costs $0; the minimum car purchase price is $5,000."
+      "description": "Public transit is free; the minimum car purchase price is $5,000."
     },
     {
-      "id": "53675560-49fd-42ce-abe4-33dbb5a8bc72",
+      "id": "bbb081d0-97a7-485a-93f8-eb36f92e3493",
       "title": "Education",
       "description": "Post-secondary education costs $8,000/year."
     },
     {
-      "id": "f1a6f566-d998-4420-8c70-31825d3a573f",
+      "id": "f1e2b342-b8fa-4349-a77a-9d66546ff71b",
       "title": "Savings",
       "description": "Savings earn 5% annually (multiply by 1.05)."
     },
     {
-      "id": "5c540537-4b3b-4385-a8d3-a9f916ab03d1",
+      "id": "1f5d141d-71d5-48ad-b869-7cf3cc42ef40",
       "title": "Debt",
       "description": "Debt accrues 10% interest annually (multiply by 1.1)."
     },
     {
-      "id": "4bca48b5-8a22-4c17-b3b0-4e850ebb6d21",
+      "id": "4dcb6132-09ec-43a5-82d2-91439936eb67",
       "title": "Debt versus savings",
       "description": "After expenses, choose how much money to put toward debt; the rest goes to savings."
     },
     {
-      "id": "fe0bc66e-975b-4855-b648-272a9af31f13",
+      "id": "08f9c7af-fa50-4209-9c93-2ccd5067303c",
       "title": "Selling a house",
-      "description": "When you sell your house, you receive 75% of its equity (house value âˆ’ remaining mortgage)."
+      "description": "When you sell your house, you receive 75% of its equity (house value - remaining mortgage) * .75."
     },
     {
-      "id": "b0e5962d-42aa-4522-a5b1-284d83de73a6",
+      "id": "06ddacbe-a509-427e-a2e8-9578cc7b4a01",
       "title": "Divorce",
       "description": "If you divorce, lose 50% of your savings and $5,000."
     },
     {
-      "id": "97fac21b-dab8-4f5c-90b8-d8979419e99d",
+      "id": "2141c9c2-0580-4eb1-a0f8-fb5cf4a24705",
       "title": "Marriage",
-      "description": "Roll 4-6 to get married."
+      "description": "Roll Even to get married."
     }
   ],
-
   "events": [
     {
-      "id": "51038a30-838f-408a-bbaf-59651a1b8051",
+      "id": "242a6a88-5987-499a-920c-08f7a91018ac",
       "title": "Car crash",
       "description": "Watch out! Your car is totaled. Roll a 4: you manage to save it, that was close."
     },
     {
-      "id": "151cede0-a2d0-4c33-9785-c7f9acb75b08",
+      "id": "28ec2588-983d-4070-9dd3-0eec398be9a2",
       "title": "Lottery Win",
-      "description": "You bought the right ticket at the right time. Add 1,000 × your roll to savings."
+      "description": "You bought the right ticket at the right time. Add 1,000 x your roll to income."
     },
     {
-      "id": "36d77851-74b8-49f0-9a83-3deeb0129f83",
+      "id": "5fed91d3-92bb-4761-94c7-bd9755d09cf1",
       "title": "Unexpected Inheritance",
-      "description": "Great-Uncle Bob apparently liked you more than everyone else. Gain $25,000. Roll a 1: Oops, it was only $2,500."
+      "description": "Great-Uncle Bob apparently liked you more than everyone else. Gain $15,000. Roll a 1: Oops, it was only $2,500."
     },
     {
-      "id": "d070f46d-216b-48fb-9bd7-b3c7455957fb",
+      "id": "25721403-31d4-439f-87ba-a0e0813db769",
       "title": "Found Money",
       "description": "You check an old account and discover money you forgot existed. Gain $10,000. Roll a 2: Sorry that was in yen $1,000"
     },
     {
-      "id": "6f24c068-da83-43a9-95aa-2a676f9fffa0",
+      "id": "7a00e196-bed5-4fec-b26e-cbbf62b497e2",
       "title": "Tax Refund",
       "description": "Apparently you gave the government too much money. Gain $10,000. Roll a 3: they kept it. Somehow."
     },
     {
-      "id": "114f3d59-ae1a-4d95-bacb-4c296d9aca37",
+      "id": "0aca5d73-3e6c-4650-8daf-362f675f74ea",
       "title": "Side Hustle",
       "description": "Your questionable idea actually makes money. Gain $10,000. Roll a 4: More questions then money $1000."
     },
     {
-      "id": "4d5e0dcc-a4ce-4ff0-ba74-4c6491812dd8",
+      "id": "90ce7f82-9298-4dd1-84b6-4f8fc8514624",
       "title": "Lucky Break",
       "description": "Right place, right time. Gain $5,000. Roll a 5: you were almost lucky. Nothing happens."
     },
     {
-      "id": "f851473d-7765-44e0-b793-d85e12c57646",
+      "id": "01814986-85c8-4477-9918-861c2e006a3d",
       "title": "Garage Treasure",
       "description": "You find something valuable buried under 15 years of junk. Gain $5,000. Roll a 6: just garbage. Lots and lots of garbage."
     },
     {
-      "id": "b86c1db6-6d53-467d-90f5-fdb14ea97c7e",
+      "id": "7a97a045-ed92-4ce0-b9d3-3dc853586285",
       "title": "Old Investment",
       "description": "That thing you bought years ago actually went up. Gain $5,000. Roll a 1: you sold too early. Nothing happens."
     },
     {
-      "id": "a2cda1bc-7ef1-480f-b1bf-e592fe497112",
+      "id": "63ea1544-2871-43e9-b4c4-42e40cc76752",
       "title": "Car Sale",
       "description": "Someone really wants your old car. Gain $5,000. Roll a 2: they changed their mind."
     },
     {
-      "id": "a541c270-5400-4978-9d4b-ea8a290e3b3d",
+      "id": "7c5cc083-ef41-4481-9950-d93c386b3168",
       "title": "Bonus!",
-      "description": "Your boss noticed you actually showed up to work. Gain $5,000. Roll a 3: your boss noticed. That's it."
+      "description": "Your boss noticed you actually showed up to work. Gain $5,000. Roll a 3: your boss noticed. That\u0027s it."
     },
     {
-      "id": "5f9dd715-b993-4fde-9d42-afb1e8ed6482",
+      "id": "f82e1eec-4619-454e-9755-bb7f75d03220",
       "title": "Home Repair",
-      "description": "Your roof has decided that it doesn't like being a roof anymore. Lose $5,000. Roll a 4: you caught it before it got expensive."
+      "description": "Your roof has decided that it doesn\u0027t like being a roof anymore. Lose $5,000. Roll a 4: you caught it before it got expensive."
     },
     {
-      "id": "0e93c8b8-d6dc-4f56-870f-32f642b143f6",
+      "id": "0e71c6c0-ea75-4ead-8bab-16527f9353b1",
       "title": "Car Repair",
-      "description": "The check-engine light has evolved into a check-bank-account light. Lose $5,000. Roll a 5: it was just the gas cap. You're saved."
+      "description": "The check-engine light has evolved into a check-bank-account light. Lose $5,000. Roll a 5: it was just the gas cap. You\u0027re saved."
     },
     {
-      "id": "1dceabfa-c9db-4bd6-9f04-7324896af59d",
+      "id": "7ec23069-3897-4c17-b79b-4334f1df666a",
       "title": "Vet Bill",
       "description": "Your pet has discovered the most expensive way possible to be sick. Lose $5,000. Roll a 6: false alarm! Your pet is fine."
     },
     {
-      "id": "5dd7a04c-8706-41da-bf0f-eb145b1f3441",
+      "id": "7a1de04b-f8e7-4efc-ab8e-fe9eaeb5c8b9",
       "title": "Bad Investment",
-      "description": "It sounded like a great idea at the time. It wasn't. Lose $5,000. Roll a 1: you got out just in time."
+      "description": "It sounded like a great idea at the time. It wasn\u0027t. Lose $5,000. Roll a 1: you got out just in time."
     },
     {
-      "id": "affc6442-92ee-4ae8-9b9c-6fb06c7b9b44",
-      "title": "Oops, That's Broken",
+      "id": "f78561e9-27a4-45b8-bde5-40c31c1919a4",
+      "title": "Oops, That\u0027s Broken",
       "description": "You broke something that was working perfectly yesterday. Lose $5,000. Roll a 2: you fixed it yourself. Somehow."
     },
     {
-      "id": "492e1ddd-6c7b-4a79-9912-b82903885068",
+      "id": "e22694f0-8b26-47be-9374-78b8c4748d18",
       "title": "Emergency Expense",
       "description": "Life has presented you with an invoice. Lose $10,000. Roll a 3: insurance actually covered it."
     },
     {
-      "id": "a70175f9-fb30-4105-ab17-4da0199b4347",
+      "id": "7b1aaea8-6e13-4fe9-9285-cfb8ff00bc7d",
       "title": "Car Trouble",
-      "description": "The mechanic says, 'Well... that's not good.' Lose $10,000. Roll a 4: it was only a loose wire."
+      "description": "The mechanic says, \u0027Well... that\u0027s not good.\u0027 Lose $10,000. Roll a 4: it was only a loose wire."
     },
     {
-      "id": "84ca8e7e-6210-47dd-ab51-ea8d4880cf24",
+      "id": "852f7f53-d0a8-4c33-82c4-0ca9d962cd8b",
       "title": "Lawsuit",
-      "description": "Congratulations! You're involved in a legal dispute. Lose $10,000. Roll a 5: you settle it without paying."
+      "description": "Congratulations! You\u0027re involved in a legal dispute. Lose $10,000. Roll a 5: you settle it without paying."
     },
     {
-      "id": "d433455d-3b76-4e31-8d08-920e835a45d8",
+      "id": "ba102e0b-70c1-46d7-ab1b-b9d00cdb9553",
       "title": "Roof Leak",
-      "description": "It's raining inside now. That's generally considered bad. Lose $10,000. Roll a 6: your insurance saves you."
+      "description": "It\u0027s raining inside now. That\u0027s generally considered bad. Lose $10,000. Roll a 6: your insurance saves you."
     },
     {
-      "id": "6ac82411-ac81-4546-91ce-f74a5034ac47",
+      "id": "97c6552d-1aff-43d9-9fd6-f64da84f8240",
       "title": "Medical Bill",
-      "description": "You're fine! Your bank account isn't. Lose $10,000. Roll a 1: your insurance covers it."
+      "description": "You\u0027re fine! Your bank account isn\u0027t. Lose $10,000. Roll a 1: your insurance covers it."
     },
     {
-      "id": "30bac5cf-9ecf-40f5-a2e7-18ece9bb51d1",
+      "id": "4d6269f2-92ac-4fb5-89cc-2bb4669702ec",
       "title": "Terrible Investment",
-      "description": "You were promised guaranteed returns. They forgot to mention the guaranteed part was the loss. Lose $10,000. Roll a 2: you listened to your gut and didn't invest."
+      "description": "You were promised guaranteed returns. They forgot to mention the guaranteed part was the loss. Lose $10,000. Roll a 2: you listened to your gut and didn\u0027t invest."
     },
     {
-      "id": "05dd32f9-e767-4d2c-b86c-cdb781a938e5",
+      "id": "c2b4ff07-f3ce-4e53-b777-fd026df766fb",
       "title": "Major Repair",
-      "description": "The thing you hoped wouldn't break has broken. Lose $25,000. Roll a 3: you found a cheap fix. Lose $5,000 instead."
+      "description": "The thing you hoped wouldn\u0027t break has broken. Lose $25,000. Roll a 3: you found a cheap fix. Lose $5,000 instead."
     },
     {
-      "id": "c875c9dc-9ae9-47c8-89fe-7eb212528ba4",
+      "id": "6572f967-88c8-4b79-b2e0-0d401cb1155d",
       "title": "Financial Disaster",
       "description": "Everything that could go wrong financially decided to happen at once. Lose $25,000. Roll a 4: you dodge the worst of it. Lose $5,000."
     },
     {
-      "id": "e00854a6-141e-42a1-98e8-333579412e6f",
+      "id": "fe498c27-61e7-468b-8c4b-4054ddefa391",
       "title": "The Expensive Mistake",
-      "description": "'How much could it possibly cost?' Famous last words. Lose $25,000. Roll a 5: lose $10,000 instead."
+      "description": "\u0027How much could it possibly cost?\u0027 Famous last words. Lose $25,000. Roll a 5: lose $10,000 instead."
     },
     {
-      "id": "7383da1e-24b9-44ba-9960-e14ab65bfac5",
+      "id": "1c443f9c-853c-433a-9205-8d1dc000779f",
       "title": "Oops, A Baby",
       "description": "Positive! Probably! Add 1 child. Roll a 6: false alarm! No baby."
     },
     {
-      "id": "6b516eff-1ea7-423c-92ac-0c042bff4d31",
+      "id": "e12534d9-2d80-44a8-95a9-789b3a1dc1e7",
       "title": "Unexpected Baby",
       "description": "The family just got a little bigger. Add 1 child. Roll a 1: false alarm! No baby."
     },
     {
-      "id": "72178ee9-fd01-432c-858e-7e4206a1a04e",
+      "id": "683a501a-739b-4fd0-bb27-bf8a314b0542",
       "title": "Baby Fever",
-      "description": "You thought you were done. Apparently, your partner wasn't. Add 1 child. Roll a 2: you talked them out of it."
+      "description": "You thought you were done. Apparently, your partner wasn\u0027t. Add 1 child. Roll a 2: you talked them out of it."
     },
     {
-      "id": "45f572cf-5cca-45db-a4a6-65e413ba8cc7",
+      "id": "44971c6a-c739-4ec3-b5e7-cde5f0b8deb3",
       "title": "Love at First Sight",
-      "description": "You met someone who doesn't immediately run away after hearing about your finances. Use once to get married any time."
+      "description": "You met someone who doesn\u0027t immediately run away after hearing about your finances. Use once to get married any time."
     },
     {
-      "id": "d50f17ad-83d5-4a3d-b5f6-12102646aaa3",
+      "id": "ff92315a-0702-44dc-b569-0c33e32f5566",
       "title": "The Big Question",
       "description": "You popped the question. They said yes! Probably. Use once to get married any time."
     },
     {
-      "id": "ad6b19ba-168e-4247-8df0-8d01ef86dce3",
+      "id": "cee5803e-9aa3-45c3-8a49-189f0a05ac13",
       "title": "Cheater!",
       "description": "Your partner catches you. Get divorced. Roll a 3: you went to counseling and worked it out."
     },
     {
-      "id": "e7c07999-757e-4b38-9345-c84dc96a9f05",
+      "id": "f5eb0966-c4d5-4305-832a-a12dd51d4ef7",
       "title": "We Need to Talk",
-      "description": "You knew it wasn't going to be good when they started with those four words. Get divorced. Roll a 4: you work things out."
+      "description": "You knew it wasn\u0027t going to be good when they started with those four words. Get divorced. Roll a 4: you work things out."
     },
     {
-      "id": "fe5e44d7-d253-4a2b-9883-a97420346678",
+      "id": "e0a034bf-92b8-48ec-b895-cdcc7f305f4f",
       "title": "The Job Interview",
-      "description": "Somehow they didn't notice you have no idea what you're doing. Use once to get a career."
+      "description": "Somehow they didn\u0027t notice you have no idea what you\u0027re doing. Use once to get a career."
     },
     {
-      "id": "cefb1f99-ae47-4357-a960-e3d8c40f24db",
+      "id": "ad2c9b9f-8607-4ced-94a3-067814277195",
       "title": "Right Place, Right Time",
       "description": "Your friend knows a guy who knows a guy. Use once to get a career."
     },
     {
-      "id": "41f60213-f669-48fd-8e98-e25042ee62a9",
+      "id": "fcd0f3e4-69a8-47a9-aeee-814b946e137b",
       "title": "Layoffs!",
-      "description": "Corporate says you're 'part of the family.' Then they fire you. Lose your job this year. Roll a 5: you made the cut."
+      "description": "Corporate says you\u0027re \u0027part of the family.\u0027 Then they fire you. Lose your job. Roll a 5: you made the cut."
     },
     {
-      "id": "a251def7-194e-4be9-82aa-d3944d963f07",
+      "id": "cdebbeb8-ed9f-4478-a6d5-405b04a72498",
       "title": "Fired!",
-      "description": "'We're going in a different direction.' That direction apparently doesn't include you. Lose your job. Roll a 6: you talk your way out of it."
+      "description": "\u0027We\u0027re going in a different direction.\u0027 That direction apparently doesn\u0027t include you. Lose your job. Roll a 6: you talk your way out of it."
     },
     {
-      "id": "f27a6402-ba2f-412f-8588-7db146b52747",
+      "id": "c38030a1-4a4e-475e-ac24-bfb440e04aa2",
       "title": "Boss From Hell",
-      "description": "You finally snap after your boss sends another email marked 'URGENT.'. Lose your job for a year. Roll a 1: you tough it out."
+      "description": "You finally snap after your boss sends another email marked \u0027URGENT.\u0027. Lose your job. Roll a 1: you tough it out."
     },
     {
-      "id": "44570ce7-493b-4923-af45-5cd79f111197",
+      "id": "a5dd65f6-260d-4692-9a1e-2616f7aa8f40",
       "title": "The Company Closed",
-      "description": "Your workplace is gone. Unfortunately, so is your paycheck. Lose your job for a year. Roll a 2: you transfer to another location."
+      "description": "Your workplace is gone. Unfortunately, so is your paycheck. Lose your job. Roll a 2: you transfer to another location."
     },
     {
-      "id": "d9c078aa-5dfd-4424-8fe8-7b11dc64c7ee",
+      "id": "0f54ae8c-c693-40b0-8d4d-fbd9445ccbd6",
       "title": "Monday Morning",
-      "description": "You wake up and realize you absolutely cannot do this job for another 30 years. Lose your job for a year. Roll a 3: coffee fixes everything."
+      "description": "You wake up and realize you absolutely cannot do this job for another 30 years. Lose your job. Roll a 3: coffee fixes everything."
     },
     {
-      "id": "1034efc3-523e-45e2-9850-8fb7290bbee1",
+      "id": "89a0a3c3-7a51-4f8e-8740-a6ea4d4f7c44",
       "title": "I Quit!",
       "description": "You hand in your resignation with absolutely no plan whatsoever. Lose your job. Roll a 4: you realize you need the money and take it back."
     },
     {
-      "id": "bb954bb9-f9e5-4804-a32b-ba562029e7de",
+      "id": "274e715b-6a25-4e33-a3b9-82a91b1d50df",
       "title": "Career Crisis",
-      "description": "You stare at your career and think, 'Is this really it?' Leave your career PERMANENTLY. Roll a 5: you decide to stick with it."
+      "description": "You stare at your career and think, \u0027Is this really it?\u0027 Leave your career field PERMANENTLY. Roll a 5: you decide to stick with it."
     },
     {
-      "id": "0a5f8a86-0fef-45f0-b997-ab7a0e942370",
+      "id": "1f4d6d96-e8dd-41f8-9b09-eae43b7bf192",
       "title": "Tripped",
-      "description": "You trip over a slightly raised piece of concrete. Your income this year. Roll a 6: 'Tis but a scratch.'"
+      "description": "You trip over a slightly raised piece of concrete. Lose this year\u0027s income. Roll a 6: \u0027Tis but a scratch.\u0027"
     },
     {
-      "id": "6801715a-64b4-43fe-80a4-618b5d9a1e72",
+      "id": "208c5d4c-581c-461f-b89c-4d966d277dbf",
       "title": "Bad Luck",
-      "description": "You somehow manage to injure yourself doing something completely normal. You cannot work this year. Roll a 1: you're fine. Somehow."
+      "description": "You somehow manage to injure yourself doing something completely normal. Lose this year\u0027s income. Roll a 1: you\u0027re fine. Somehow."
     },
     {
-      "id": "8ea7187a-278a-46d1-878b-bcf5ee214f23",
+      "id": "9a2f5178-790e-4886-87dd-1659fdd64dc2",
       "title": "Stay in Bed",
       "description": "Nothing can happen if you stay in bed all year. Use once to get out of one event."
     },
     {
-      "id": "ed5738ba-b87d-456f-bbc2-5f4ae511cd4d",
+      "id": "db6fcbb8-3109-408a-9873-ea663e3cf4a7",
       "title": "Second Chance",
       "description": "Pretend it never happened. Use once to get out of one event."
     },
     {
-      "id": "bdca6eec-6ee0-4a75-92e3-2223e4f7f2df",
+      "id": "83d64186-e82e-416e-9ff1-b6d8e0b10f93",
       "title": "Win a Car!",
-      "description": "Congratulations! You now own a vehicle you didn't pay for. Gain a car. Roll a 2: the dealership calls. It was a clerical error."
+      "description": "Congratulations! You now own a vehicle you didn\u0027t pay for. Gain a car. Roll a 2: the dealership calls. It was a clerical error."
     },
     {
-      "id": "60ac547f-6fe8-4532-b25d-741d6def4bc8",
+      "id": "77277939-a84b-46b9-bd77-b2a2e86e5395",
       "title": "Car Giveaway",
       "description": "You entered a contest for a car and somehow actually won. Gain a car. Roll a 3: you were the runner-up."
     },
     {
-      "id": "ffab0ed0-fcc5-4dc5-a92e-87cc0a5f0b14",
+      "id": "0bc73eda-9a22-4823-a193-96cc2f7227e1",
       "title": "Car Theft",
       "description": "You go outside and discover your car has gone on an unscheduled vacation. Lose your car. Roll a 4: you find it parked three blocks away."
     },
     {
-      "id": "815d47b7-67b9-49fe-b569-bdb7609e965e",
+      "id": "1f8f55b2-c8d3-4188-a175-88bdbdd8a83f",
       "title": "Car Crash",
       "description": "You and your car had a disagreement with another vehicle. Lose your car. Roll a 5: it can be repaired."
     },
     {
-      "id": "0b05ae07-a085-435e-a1f7-5fffffafbdd9",
+      "id": "553fe3f1-7703-4f64-9d48-01dde09b87d1",
       "title": "Engine Explodes",
-      "description": "Your car has decided it would rather be a very expensive lawn ornament. Lose your car. Roll a 6: who doesnt have an extra engine in there back yard."
+      "description": "Your car has decided it would rather be a very expensive lawn ornament. Lose your car. Roll a 6: who doesnt have an extra engine in there back yard?"
     },
     {
-      "id": "9aa336de-c13a-41c4-ab9c-9a373cf61e93",
-      "title": "Where's My Car?",
+      "id": "a7ef22c7-ff2f-488e-b5ae-0a2ccf266321",
+      "title": "Where\u0027s My Car?",
       "description": "You definitely parked it here... right? Lose your car. Roll a 1: you find it. You just forgot where you parked."
     },
     {
-      "id": "63c22cd4-2b17-4ce7-89d8-6046cc14f8c1",
+      "id": "a37f67d1-4ea4-4db0-ad58-7f4fd8d90da1",
       "title": "The Mechanic",
-      "description": "'It's going to be cheaper to buy another car.' Lose your car. Roll a 2: It wasn't."
+      "description": "\u0027It\u0027s going to be cheaper to buy another car.\u0027 Lose your car. Roll a 2: It wasn\u0027t."
     },
     {
-      "id": "216ec44d-756b-437e-9141-7fb7e6d41c39",
-      "title": "Education Setback",
-      "description": "Your professor has discovered that you are, in fact, not finished. Education failed this year. Roll a 3: you convince them to let you finish."
-    },
-    {
-      "id": "c24e0d6f-04ce-4791-81e0-f7abe0217683",
-      "title": "Registration",
-      "description": "Problem: You missed an important deadline. Education failed this year. Roll a 4: they make an exception."
-    },
-    {
-      "id": "0ca8c38d-a269-4b40-a624-fbeb8c2bfbb3",
+      "id": "7de1562d-2e48-40db-b408-5a3d3c9c6928",
       "title": "Scholarship!",
       "description": "Someone looked at your tuition bill and decided to save you from it. Use for one free year of education."
     },
     {
-      "id": "f5e8e0bd-3595-4255-a57e-04becb1b956a",
+      "id": "378769df-2e8d-47de-a5fc-178846c82d39",
       "title": "Free Tuition",
-      "description": "Somehow, you found the magical phrase 'fully funded.'. Use for one free year of education."
+      "description": "Somehow, you found the magical phrase \u0027fully funded.\u0027. Use for one free year of education."
     },
     {
-      "id": "3a2c248d-a771-4460-b6cc-6e00176b1359",
+      "id": "0f4f4664-157d-4083-bcad-254ca5569e64",
       "title": "Bankruptcy",
-      "description": "You have officially entered financial 'oops.' Debt becomes $0, but you cannot buy a house or car for 3 years. Roll a 5: you dont qualify for bankruptcy."
+      "description": "You have officially entered financial \u0027oops.\u0027 Debt becomes $0, but you cannot buy a house or car for 3 years. Roll a 5: you dont qualify for bankruptcy."
     },
     {
-      "id": "9b721628-d5ef-4afa-b1b8-79127b721ba8",
+      "id": "a46de1fc-88da-4638-b74b-3eadf4f47796",
       "title": "Promotion!",
-      "description": "Your boss finally realizes that replacing you would be difficult. Income increases by $10,000/year. Roll a 6: your boss says 'maybe next year.'"
+      "description": "Your boss finally realizes that replacing you would be difficult. Income increases by $3,000/year. Roll a 6: your boss says \u0027maybe next year.\u0027"
     },
     {
-      "id": "263a8c18-1966-49f5-9778-2e5e5d87555c",
+      "id": "56778c98-da3d-42bd-aef1-c7a1aa17ad83",
       "title": "Forced Sale",
-      "description": "The bank, circumstances, or life itself says it's time to move. Sell your house. Roll a 1: you manage to keep it."
+      "description": "The bank, circumstances, or life itself says it\u0027s time to move. Sell your house. Roll a 1: you manage to keep it."
     },
     {
-      "id": "cc779d06-238c-4444-bbfc-50fb94505b19",
+      "id": "699ac94c-43ca-4b50-a18c-b5875adb8f88",
       "title": "Noticed Your Hard Work",
-      "description": "You've been doing your job well enough that someone finally noticed (yeah right). Income increases by $5,000/year. Roll a 2: your boss gives you a pizza party instead."
+      "description": "You\u0027ve been doing your job well enough that someone finally noticed (yeah right). Income increases by $4,000/year. Roll a 2: your boss gives you a pizza party instead."
     },
     {
-      "id": "477ae9d6-bdb1-4add-a5b7-14c0859d028b",
+      "id": "3c2afe7f-adf0-4a89-a948-ba322eac1fb0",
       "title": "The Brown-Noser",
-      "description": "You brought your boss coffee for 4,245 consecutive days. It worked. Income increases by $5,000/year. Roll a 3: your boss starts asking for cream and sugar too. No raise."
+      "description": "You brought your boss coffee for 4,245 consecutive days. It worked. Income increases by $2,000/year. Roll a 3: your boss starts asking for cream and sugar too. No raise."
     },
     {
-      "id": "a0c67526-bd0c-4380-90c3-fa2d86cc02be",
+      "id": "5691f96d-7be5-4b57-a33f-ead6b87ee31f",
       "title": "House Flipper",
       "description": "You sell your house at the perfect time. You can choose to sell your house and receive 110% of the equity."
+    },
+    {
+      "id": "b6079fec-45f0-45c2-9726-abdee82ca01c",
+      "title": "Influencer Moment",
+      "description": "You post one mildly funny video and the algorithm decides you\u0027re famous for 48 hours. Gain $5,000. Roll a 1: it was just your mom and three bots."
+    },
+    {
+      "id": "654c0212-4be3-4c30-a230-467d3878d27d",
+      "title": "Cryptocurrency Rollercoaster",
+      "description": "You finally check that bitcoin wallet from 2019. Gain $5,000. Roll a 2: it\u0027s worth $0.37 and a single meme coin named after a potato."
+    },
+    {
+      "id": "226b727d-ed90-45f5-a1ca-cc8b535cda15",
+      "title": "Neighbor\u0027s Leftovers",
+      "description": "Your neighbor moves out and leaves behind a suspiciously nice grill. Gain $2,000 in free stuff. Roll a 3: the grill is haunted."
+    },
+    {
+      "id": "d80966fa-215f-4b91-9404-adb3bdc7e029",
+      "title": "Viral Coupon",
+      "description": "You find a coupon that actually works. Gain $3,000 in free merchandise. Roll a 4: the store closed three years ago."
+    },
+    {
+      "id": "4daa7f56-3d62-4ffd-a993-057734a63f18",
+      "title": "Freelance Win",
+      "description": "Someone pays you actual money for that thing you do on the side. Gain $4,000. Roll a 5: they pay in \u0027exposure\u0027 and a handshake."
+    },
+    {
+      "id": "6b99f31c-b806-4e37-9cb0-c2de7d8c6937",
+      "title": "Appliance Rebellion",
+      "description": "Your fridge has decided to become a very expensive paperweight. Lose $3,000. Roll a 6: it just needed a stern talking-to."
+    },
+    {
+      "id": "912c4caa-522d-4268-8e62-2a03b8da12e7",
+      "title": "Plumbing Adventure",
+      "description": "Water is coming out of places water should not come out of. Lose $4,000. Roll a 1: it was just a clog. A very dramatic clog."
+    },
+    {
+      "id": "92881bbd-dc5a-4ba3-be89-43f4c0949411",
+      "title": "Identity Theft (Almost)",
+      "description": "Someone tried to open accounts in your name. Lose $5,000. Roll a 2: the bank catches it first."
+    },
+    {
+      "id": "48164890-6fcc-4e6f-94fe-938be6da2787",
+      "title": "Gym Membership Trap",
+      "description": "You forgot to cancel. Again. Lose $1,000. Roll a 3: you actually go once and feel slightly less guilty."
+    },
+    {
+      "id": "18ebc6fc-0dd7-4897-887e-0f3fef962b12",
+      "title": "Subscription Avalanche",
+      "description": "You discover you\u0027re paying for 14 streaming services and a monthly sock club. Lose $2,000. Roll a 4: you cancel all of them in a fit of rage."
+    },
+    {
+      "id": "815f14d3-c3b6-4343-8f28-185ae3736161",
+      "title": "Wedding Guest Tax",
+      "description": "Three friends get married in the same year. Your wallet weeps. Lose $4,000. Roll a 5: you give them a heartfelt card and a plant."
+    },
+    {
+      "id": "2c0eb88a-8347-4874-9187-949e3620ea88",
+      "title": "Pet Drama",
+      "description": "Your pet has developed expensive taste in furniture. Lose $3,000. Roll a 6: the couch was already ugly anyway."
+    },
+    {
+      "id": "b51f6537-1069-4368-acfc-be189dc85f19",
+      "title": "Family Reunion",
+      "description": "Aunt Carol has opinions about your life choices and also needs a place to stay. Lose $2,000 in groceries and dignity. Roll a 1: she leaves early."
+    },
+    {
+      "id": "2482dce8-3d50-49e4-bfd5-a84d1cb5ae5b",
+      "title": "Squirrel Incident",
+      "description": "A squirrel has declared war on your attic. Lose $2,000. Roll a 2: the squirrel loses. The attic wins...?"
+    },
+    {
+      "id": "0867a56c-4e90-4afb-bb09-16c46a4bc90e",
+      "title": "Parking Ticket Empire",
+      "description": "The city has decided you are its favorite customer. Lose $1,000. Roll a 3: you successfully argue one of them down to a warning."
+    },
+    {
+      "id": "32b3e270-3cbb-4dd1-9f25-53fc8f292c38",
+      "title": "Sudden Hobby",
+      "description": "You discover a new passion that requires specialized equipment and a surprising amount of money. Lose $4,000. Roll a 4: you quit after two weeks like a normal person."
+    },
+    {
+      "id": "705b75e2-6179-4b60-a2fd-a756236662af",
+      "title": "The Great Bake-Off",
+      "description": "You enter a local baking contest for fun. Gain $1,000 and mild local fame. Roll a 5: your cake collapses in a way that becomes a meme."
+    },
+    {
+      "id": "3cd75ccd-9bee-427b-be4b-f8ee8951d68c",
+      "title": "Jury Duty",
+      "description": "You have been selected for the privilege of sitting in a room and not working. Lose this year\u0027s income. Roll a 6: you get dismissed on day one."
+    },
+    {
+      "id": "7db824c7-f6d3-421a-8f82-87bf8c1558a2",
+      "title": "Haunted House Hunt",
+      "description": "You buy a \u0027charming fixer-upper.\u0027 It has opinions. Lose $10,000 in unexpected repairs. Roll a 1: the previous owners left a hidden safe with enough money to cover repairs."
+    },
+    {
+      "id": "e0004596-b556-42ae-9ffa-f96b7c987896",
+      "title": "Online Auction Victory",
+      "description": "You win something cool for a suspiciously low price. Gain $2,000 in value. Roll a 2: shipping costs more than the item."
+    },
+    {
+      "id": "e8d1e254-b879-4312-b751-469e604260fb",
+      "title": "Food Delivery Curse",
+      "description": "You order takeout every night for a month. Lose $2,000. Roll a 4: one of the drivers becomes your friend and gives you free fries."
+    },
+    {
+      "id": "8f68aa5b-9855-4b37-8419-249103a02751",
+      "title": "Accidental Expert",
+      "description": "People start asking you for advice on something you only know a little about. Gain $2,000 consulting. Roll a 5: someone figures out you\u0027re just winging it."
+    },
+    {
+      "id": "2469fa57-ba8c-49e7-82ff-3e45a936fe92",
+      "title": "Storm Damage",
+      "description": "Nature has opinions about your property. Lose $8,000. Roll a 6: insurance actually pays without a 6-month fight."
+    },
+    {
+      "id": "56473c26-a26d-476f-a6bf-21d61d65411f",
+      "title": "The Mysterious Package",
+      "description": "A package arrives with your name on it. You didn\u0027t order it. Gain a $1,000 mystery item. Roll a 1: it\u0027s someone else\u0027s and they want it back. Awkward."
+    },
+    {
+      "id": "a052a44a-8ded-4390-b4ed-bf84949d8703",
+      "title": "Career Pivot Attempt",
+      "description": "You try to switch work places mid-year. Income increases by $5,000/year. Roll a 2: They don\u0027t want you"
+    },
+    {
+      "id": "5d3ce8be-1712-463c-a44e-a89b37be403f",
+      "title": "The Group Project of Life",
+      "description": "You\u0027re stuck coordinating something with people who don\u0027t check their messages. Lose $1,000 and 3 years of patience. Roll a 3: someone else finally steps up."
+    },
+    {
+      "id": "8ba8a6e2-9b10-40f5-94aa-1368b94f3363",
+      "title": "Lucky Parking Spot",
+      "description": "You find a perfect parking spot right in front. Gain $0 but feel like a god. Roll a 4: you get a ticket anyway because the meter was broken."
+    },
+    {
+      "id": "c83171a0-75a5-49e2-b691-34a0eabdf7c6",
+      "title": "Inheritance of Junk",
+      "description": "A distant relative leaves you their entire collection of... things. Gain $4,000 after selling most of it. Roll a 5: it\u0027s all worthless. But you now own 200 commemorative plates."
+    },
+    {
+      "id": "1a25e539-cdd6-43eb-9e1c-2f6f74631967",
+      "title": "The Awkward Reunion",
+      "description": "You run into your high school nemesis who is somehow doing better than you. Lose $1000 in impulsive \u0027self-improvement\u0027 purchases. Roll a 6: they\u0027re actually miserable and you feel better for free."
+    },
+    {
+      "id": "a4f7e7ad-1b3e-4de9-8b33-4af1db8a3902",
+      "title": "DIY Disaster",
+      "description": "You watched one video and decided you could fix it yourself. Lose $2,000. Roll a 1: it somehow works. You become insufferable about it."
+    },
+    {
+      "id": "5157082d-0015-4e16-bf09-d48383c2f853",
+      "title": "Spam Call Victory",
+      "description": "You waste 20 minutes of a scammer\u0027s time. Gain pure satisfaction and $0. Roll a 2: they somehow still get $1000 out of you. How?"
+    },
+    {
+      "id": "e6cdaf78-af29-46e3-97e3-429f515731b9",
+      "title": "Office Snack Tax",
+      "description": "You keep eating the good snacks and someone finally notices. Lose $1000 in forced office contributions. Roll a 3: you become the new snack buyer. Power."
+    },
+    {
+      "id": "0f5f7cc8-4232-4623-8b30-fbafac3227fc",
+      "title": "Weather App Betrayal",
+      "description": "You trusted the forecast. It lied. Lose $1,000 in ruined outdoor plans and emergency supplies. Roll a 4: it was sunny the whole time and you just had a smudge on your glasses."
+    },
+    {
+      "id": "c0dd701e-abfc-4ed0-9308-d15f0077edf9",
+      "title": "The Forgotten Gift Card",
+      "description": "You find a gift card from three years ago with money still on it. Gain $1000. Roll a 5: it expired last week. Of course."
+    },
+    {
+      "id": "8baf3df6-d621-490f-88fe-39801bced7a0",
+      "title": "Roommate Roulette",
+      "description": "Your roommate moves out with zero notice. Lose $3,000 covering their share. Roll a 6: they left behind a really nice TV as apology."
+    },
+    {
+      "id": "e26de8dc-4cb2-484d-85d5-380b7287a9cc",
+      "title": "Public Speaking Nightmare",
+      "description": "You get volunteered to give a presentation. Survive and gain $2,000 in \u0027professional development.\u0027 Roll a 1: you freeze completely."
+    },
+    {
+      "id": "fd7fcca4-9e90-49eb-8dc5-75e47a9acdd4",
+      "title": "The Eternal Waitlist",
+      "description": "You finally get off a waitlist for something cool. Gain $1,000 value experience. Roll a 2: it\u0027s sold out the moment you try to claim it."
+    },
+    {
+      "id": "c7b2589e-cc2f-41f7-b139-f24405cbe963",
+      "title": "Mildly Successful Side Project",
+      "description": "That thing you built \u0027just for fun\u0027 makes a little money. Gain $6,000. Roll a 3: it makes exactly enough to cover the domain name for another year."
+    },
+    {
+      "id": "36bfcea6-2b6f-4aad-b1e4-926d06fa3c70",
+      "title": "The Final Boss of Adulting",
+      "description": "You successfully complete a full year of adult responsibilities without a major crisis. Gain $5,000 and a deep sense of unease that something is about to go wrong. Roll a 4: something immediately goes wrong."
+    },
+    {
+      "id": "8c9d13c5-5d83-4e23-830a-f15379f6daf3",
+      "title": "Hot Market",
+      "description": "The housing market is temporarily insane. You can choose to sell your house and receive 110% of the equity."
+    },
+    {
+      "id": "995ff7b8-478b-49fa-bbce-f3f38bebc925",
+      "title": "Desperate Buyer",
+      "description": "Someone really, really wants your house. You can choose to sell your house and receive 115% of the equity."
+    },
+    {
+      "id": "a2e536e9-ab07-4fbd-a4bc-cab2bac87dc2",
+      "title": "Quiet Raise",
+      "description": "They slid a little extra into your paycheck and hoped you wouldn\u0027t make a big deal out of it. Income increases by $5,000/year. Roll a 1: it was just an error."
+    },
+    {
+      "id": "36df3213-63fb-4f06-92a4-b6786e402b4d",
+      "title": "Performance Review Win",
+      "description": "You somehow survived the annual review with a smile. Income increases by $4,000/year. Roll a 2: they give you a \u0027great job\u0027 email instead."
+    },
+    {
+      "id": "dacde845-51e9-46f3-b9b5-423e9edbe766",
+      "title": "Market Adjustment",
+      "description": "Your company finally noticed the cost of living exists. Income increases by $3,000/year. Roll a 3: they adjusted it by giving everyone free coffee."
+    },
+    {
+      "id": "2747ea3a-ddc1-4c1e-8b5f-1ff3570a6889",
+      "title": "Skill Premium",
+      "description": "You learned one useful thing and they paid you for it. Income increases by $2,000/year. Roll a 4: they just put it on your LinkedIn for you."
+    },
+    {
+      "id": "b9dc13e1-dbbc-4f0f-8bc9-7a10a6d9039c",
+      "title": "Loyalty Bonus",
+      "description": "You\u0027ve stayed long enough that leaving would be annoying for them. Income increases by $2,000/year. Roll a 5: they give you a mug that says \u0027Team Player\u0027."
+    },
+    {
+      "id": "1659d689-1994-411a-b835-4c357d673b55",
+      "title": "Cost of Living Bump",
+      "description": "A tiny raise to keep you from updating your resume. Income increases by $2,000/year. Roll a 6: it barely covers the new parking fee."
+    },
+    {
+      "id": "ce5f02e1-a364-4c41-92bb-aa0104cd7ced",
+      "title": "Almost a Raise",
+      "description": "They wanted to give you more. The budget said no. Income increases by $1,000/year. Roll a 1: just a firm handshake."
+    },
+    {
+      "id": "2346cd7f-db9d-4e39-be24-bbb40416945e",
+      "title": "Token Increase",
+      "description": "The absolute smallest raise they could give without looking mean. Income increases by $1,000/year. Roll a 2: they call it \u0027professional development.\u0027"
+    },
+    {
+      "id": "40be69b2-4d03-4e6f-86b6-92c4d891db6e",
+      "title": "Existential Stare",
+      "description": "You spend an entire afternoon staring at a wall questioning every decision that led you here. Nothing happens. You just feel weird now."
+    },
+    {
+      "id": "727502ec-b409-4fe0-9f92-d5e0d9dd296e",
+      "title": "Group Chat Chaos",
+      "description": "You get added to a group chat of 47 people who all type in all caps. Nothing financially changes."
+    },
+    {
+      "id": "cca37126-c2cd-4887-a07b-084bfe6d63d3",
+      "title": "Mildly Spicy Takeout",
+      "description": "You ordered \u0027medium\u0027 and received \u0027why is my face on fire.\u0027 Gain nothing except temporary regret and a story."
+    },
+    {
+      "id": "dfc5b07a-3295-46e3-a5e5-3a4f8773c3fe",
+      "title": "Caught Red-Handed",
+      "description": "Your partner found the secret second phone. Get divorced. Roll a 1: it was just for work. Somehow they believe you."
+    },
+    {
+      "id": "52d088ef-6bbf-4ec6-bb81-7b1bb275a2da",
+      "title": "Irreconcilable Differences",
+      "description": "You both realized you hate the same things... including each other. Get divorced. Roll a 2: couples therapy buys you another year."
+    },
+    {
+      "id": "6d4ade86-ce00-421c-b1e0-6c5e1c0f7406",
+      "title": "The Texts Came Out",
+      "description": "Someone forwarded the group chat. Get divorced. Roll a 3: you convince them it was \u0027just banter.\u0027"
+    },
+    {
+      "id": "3b0da1d5-092b-420e-a689-c4501dcb15d1",
+      "title": "Separate Vacations Forever",
+      "description": "You booked two completely different trips and never looked back. Get divorced. Roll a 4: you both apologize and awkwardly continue."
+    },
+    {
+      "id": "0b871816-b845-4d2a-a6b5-91d07d92772f",
+      "title": "Surprise Bundle",
+      "description": "The test came back with more lines than expected. Add 1 child. Roll a 5: false positive. Huge sigh of relief."
+    },
+    {
+      "id": "c0d1cde2-c736-4d36-a833-535fd99f6141",
+      "title": "Oopsie Daisy",
+      "description": "Well... that was not part of the five-year plan. Add 1 child. Roll a 6: it was a very realistic dream."
+    },
+    {
+      "id": "1190b67c-7698-4b0a-bacf-017dba621a14",
+      "title": "The Plot Twist",
+      "description": "Life just hit you with the ultimate expansion pack. Add 1 child. Roll a 1: the doctor mixed up the charts."
+    },
+    {
+      "id": "9dbc38f8-64eb-467f-a519-8aa88f38c08a",
+      "title": "Gone in 60 Seconds",
+      "description": "You stepped inside for one second. Your car did not. Lose your car. Roll a 2: it was towed, not stolen. Still expensive."
+    },
+    {
+      "id": "1859eca0-cb83-4cd0-8ee3-e094eb0840e6",
+      "title": "Totaled Beyond Recognition",
+      "description": "Someone scratched your car. The decided this was the end. Lose your car. Roll a 3: you buff it out. Barely."
+    },
+    {
+      "id": "9bf5fd53-ddb7-4bac-a5b2-8db93477c47e",
+      "title": "Flooded Engine",
+      "description": "You drove through that puddle like a champion. Your car disagreed. Lose your car. Roll a 4: it just needs a drying out."
+    },
+    {
+      "id": "ef802a3a-71d3-4644-98df-b08b8f17fbd0",
+      "title": "Back Injury",
+      "description": "You sneezed wrong. Lose this year\u0027s income. Roll a 5: it was just a weird muscle cramp."
+    },
+    {
+      "id": "0378bb38-2a5f-4095-94d5-ef382ced1b84",
+      "title": "Mystery Illness",
+      "description": "The doctor says \u0027we\u0027ve never seen this before\u0027 and then bills you. Lose this year\u0027s income. Roll a 6: it was just stress. Expensive stress."
+    },
+    {
+      "id": "8b59d13a-2748-42cd-b2d1-bcf962fc1942",
+      "title": "Broken Wrist",
+      "description": "You tripped over absolutely nothing. Lose this year\u0027s income. Roll a 1: it\u0027s only a sprain. You\u0027re back next week. Yay?"
+    },
+    {
+      "id": "e27b2460-1d13-4776-94fa-99bd908ccad5",
+      "title": "Burnout Collapse",
+      "description": "Your body finally filed a formal complaint. Lose this year\u0027s income. Roll a 2: a long weekend somehow fixes it."
+    },
+    {
+      "id": "c11ed5a4-da1d-4ce6-b88a-82e3a864f317",
+      "title": "Forced Bed Rest",
+      "description": "Doctor\u0027s orders: do absolutely nothing productive for a year. Lose this year\u0027s income. Roll a 3: you ignore the doctor and go back early."
+    },
+    {
+      "id": "8d1cac94-ea51-432b-845a-06c47992a90b",
+      "title": "Restructuring",
+      "description": "They restructured the company right out from under you. Lose your job. Roll a 4: they find you a new seat at the table."
+    },
+    {
+      "id": "3415f482-70e7-438b-aa36-8a8c24919d15",
+      "title": "Budget Cuts",
+      "description": "The company needs to \u0027tighten its belt.\u0027 Your job was the belt. Lose your job. Roll a 5: they cut the snack budget instead."
+    },
+    {
+      "id": "b2a02edc-f8e3-4bf5-8ca4-760467a96eaf",
+      "title": "New Management",
+      "description": "The new boss brought their own people. You were not one of them. Lose your job. Roll a 6: they keep you because you know where the files are."
+    },
+    {
+      "id": "6bffd32e-4fa2-481f-ba22-5e31f591066e",
+      "title": "Performance Improvement Plan",
+      "description": "They put you on a PIP. Everyone knows what that means. Lose your job. Roll a 1: you actually improve and survive."
+    },
+    {
+      "id": "c4c87f8a-249c-4400-9897-dd1899087e0c",
+      "title": "The Merger",
+      "description": "Two companies became one. Your position became zero. Lose your job. Roll a 2: they offer you a different role at the same pay."
+    },
+    {
+      "id": "751ee7d2-4586-4384-82f7-08221576ae3b",
+      "title": "Chapter 7 Reality",
+      "description": "The numbers finally stopped working. Debt becomes $0, but you cannot buy a house or car for 3 years. Roll a 3: the judge says you\u0027re not quite broke enough."
+    },
+    {
+      "id": "e34e3fcf-3c1a-4e26-b119-4c311a4c49ed",
+      "title": "Financial Reset Button",
+      "description": "You officially hit the big red button. Debt becomes $0, but you cannot buy a house or car for 3 years. Roll a 4: you find a way to claw back some dignity and assets."
+    },
+    {
+      "id": "4d202976-5b7d-4354-9bb2-19fb1dfb4043",
+      "title": "Industry Exit",
+      "description": "You burn every bridge in your field on the way out. Leave your career PERMANENTLY and cannot return to that field. Roll a 5: It was just a nightmare... or dream?"
+    },
+    {
+      "id": "5037a65a-720e-468e-a409-5ed33188876c",
+      "title": "Blacklisted",
+      "description": "Word got around. Leave your career PERMANENTLY and cannot return to that field. Roll a 6: the rumors were only half true."
+    },
+    {
+      "id": "94755898-ccea-4235-8ef5-204d551ccc00",
+      "title": "Scandal",
+      "description": "Something very public and very stupid happened. Leave your career PERMANENTLY and cannot return to that field. Roll a 1: it blows over in a month."
+    },
+    {
+      "id": "0289eb48-b918-4748-8f76-e7ce629cb565",
+      "title": "Burned Out Forever",
+      "description": "You never want to see that industry again. Leave your career PERMANENTLY and cannot return to that field. Roll a 2: you miss it and sneak back."
+    },
+    {
+      "id": "7ac9ef89-6867-4286-b8fc-03fd97347462",
+      "title": "Ethical Walkout",
+      "description": "You refuse to keep doing the thing. Leave your career PERMANENTLY and cannot return to that field. Roll a 3: they offer you a slightly less evil version of the job."
+    },
+    {
+      "id": "215d2431-a794-48fd-a086-eddd1eba6b91",
+      "title": "Radio Contest Miracle",
+      "description": "You were caller number 9. Gain a car. Roll a 4: it was a bicycle with a very nice paint job."
+    },
+    {
+      "id": "ddb41cbc-b1ec-44e9-8ee0-8f451a99984c",
+      "title": "Whirlwind Romance",
+      "description": "You met someone and everything moved extremely fast. Use once to get married any time."
+    },
+    {
+      "id": "46884ba5-9743-476a-a574-353e709808a6",
+      "title": "The Proposal That Worked",
+      "description": "You asked. They said yes without laughing. Use once to get married any time."
+    },
+    {
+      "id": "c732d7b2-2b11-4a69-aedc-fbbdad44279c",
+      "title": "Get Out of Jail Free",
+      "description": "You found a cosmic loophole. Use once to skip one event."
+    },
+    {
+      "id": "be6449ce-b1df-4d9a-9344-9838339f1149",
+      "title": "Narrative Edit",
+      "description": "You simply refuse to accept this plot point. Use once to skip one event."
+    },
+    {
+      "id": "2b67f9ac-74b8-4b70-9746-66ace9bcdd00",
+      "title": "Divine Intervention",
+      "description": "Something out there likes you today. Use once to skip one event."
+    },
+    {
+      "id": "81ccf8c6-0d29-4b2e-883b-efd492b56e54",
+      "title": "Plot Armor",
+      "description": "The universe has decided this one doesn\u0027t count. Use once to skip one event."
+    },
+    {
+      "id": "ed192ba6-30a2-4ca9-b3f4-4fe584e1f70a",
+      "title": "Full Ride... No... Some ride?",
+      "description": "Someone decided your brain was worth investing in. Use for one free year of education."
+    },
+    {
+      "id": "fa71af72-0a0b-42c5-a56e-90db9ed3d318",
+      "title": "Grant Angel",
+      "description": "A grant appeared with your name on it. Use for one free year of education."
+    },
+    {
+      "id": "acc95ef4-3fa5-435c-91a4-e965094e66ed",
+      "title": "Tuition Vanish",
+      "description": "The bill simply... disappeared. Use for one free year of education."
+    },
+    {
+      "id": "c0f50003-ab31-415a-985e-531235c84775",
+      "title": "Market Correction",
+      "description": "Your industry just got a little less generous. Income decreases by $3,000/year. Roll a 5: it\u0027s only temporary."
+    },
+    {
+      "id": "f700f496-8bf9-4bcc-a683-7ec930e92842",
+      "title": "Hours Cut",
+      "description": "They reduced your hours and called it \u0027flexibility.\u0027 Income decreases by $2,000/year. Roll a 6: you pick up a small side gig to cover it."
+    },
+    {
+      "id": "3849edd0-5461-461d-8b72-3ff3724c44d1",
+      "title": "Benefit Squeeze",
+      "description": "They kept your salary but quietly gutted everything else. Income decreases by $1,000/year. Roll a 1: you negotiate most of it back."
+    },
+    {
+      "id": "3ea27150-cdca-492d-b9c3-bb1de9602990",
+      "title": "The Missing Sock Council",
+      "description": "You open the dryer and discover the socks have formed a union. Nothing happens. They just judge you."
+    },
+    {
+      "id": "699fc68e-9bf7-484e-91bc-f49479af8c78",
+      "title": "Aggressive Pigeon Stare",
+      "description": "A pigeon locks eyes with you for a full 40 seconds. You lose the staring contest. Gain nothing except existential discomfort."
+    },
+    {
+      "id": "b8f3182c-0212-456e-8e3e-971fdfcd2216",
+      "title": "Mysterious Fridge Noise",
+      "description": "Your fridge starts making a new sound at 2:17 a.m. every night. Nothing is broken. It just wants attention."
+    },
+    {
+      "id": "e6a68d37-6c4f-40de-a077-23bb521066d1",
+      "title": "The Group Chat That Wouldn\u0027t Die",
+      "description": "You left the group chat. They made a new one and added you back. Gain nothing. Accept your fate."
+    },
+    {
+      "id": "d97316eb-ba2f-4e0c-a76f-591dbc25d85c",
+      "title": "Slightly Crooked Picture Frame",
+      "description": "You notice one picture frame is 2 degrees off. You fix it. Five minutes later it\u0027s crooked again. Nothing else happens."
+    },
+    {
+      "id": "275daa7d-23f7-4001-a952-32f61412d711",
+      "title": "Tornado.",
+      "description": "A tornado decides it\u0027s your house\u0027s time. Sell your house. Roll a 1: And that time is not now"
+    },
+    {
+      "id": "7eea9af8-bfc5-444d-8538-b11025099ad9",
+      "title": "Eminent Domain Surprise",
+      "description": "The city needs your land for a very important project. Sell your house. Roll a 2: they only need your yard."
+    },
+    {
+      "id": "391ff610-b45a-43b4-9734-2ea855fe4c6b",
+      "title": "Divorce Settlement House",
+      "description": "The paperwork is clear: the house has to go. Sell your house. Roll a 3: you get to keep the good couch."
+    },
+    {
+      "id": "34a2b016-69eb-4f56-be0f-51323762503c",
+      "title": "Inheritance Condition",
+      "description": "Great-Aunt Mildred\u0027s will has one weird requirement: sell the house or lose the rest of the inheritance. Sell your house. Roll a 4: the rest of the inheritance was just more commemorative plates."
+    },
+    {
+      "id": "ee99dce5-d431-4cad-a52b-399dfeb10f84",
+      "title": "Slipped",
+      "description": "You slipped on something that absolutely should not have been there. Lose this year\u0027s income. Roll a 4: you\u0027re fine. Your dignity isn\u0027t."
+    },
+    {
+      "id": "8ae94d44-0da6-4610-8472-ea45b9cc0c76",
+      "title": "Unexpected Surgery",
+      "description": "Apparently, that thing you\u0027ve been ignoring actually needed attention. Lose this year\u0027s income. Roll a 5: turns out it can wait."
+    },
+    {
+      "id": "67495601-1f5a-4411-9653-02021596200d",
+      "title": "The Accident",
+      "description": "One moment you\u0027re having a normal day. The next, you\u0027re filling out paperwork. Lose this year\u0027s income. Roll a 6: nothing serious, just a very expensive scare."
+    },
+    {
+      "id": "b0ead331-783b-40c1-8d2f-72bd384759fc",
+      "title": "Out for the Year",
+      "description": "Your body has officially requested a sabbatical. Lose this year\u0027s income. Roll a 1: you recover much faster than expected."
+    },
+    {
+      "id": "d1d3f07a-ce85-4eed-9fa9-706665c1a73f",
+      "title": "You\u0027re Fired",
+      "description": "Your boss calls you into the office and closes the door. Lose your job. Roll a 3: they were actually going to offer you a promotion."
+    },
+    {
+      "id": "5fc09747-8f41-42a4-9bbe-cbc71782c8e9",
+      "title": "Commission Jackpot",
+      "description": "You closed a deal so big your boss actually smiled. You gain $1,000 x your roll"
+    },
+    {
+      "id": "5f72232b-44d7-4327-bd11-149cabf8ece2",
+      "title": "Viral Side Hustle",
+      "description": "Your weird little project suddenly pays real money every month. You gain $1,000 x your roll"
+    },
+    {
+      "id": "293961ca-2f47-48b4-aee6-41db21cee4b7",
+      "title": "Skill Stack Payday",
+      "description": "You stacked just enough random skills that someone decided to pay you properly. You gain $1,000 x your roll"
+    },
+    {
+      "id": "195df2a8-2e0b-42d3-821b-1d505f5387ba",
+      "title": "Quiet Negotiation Win",
+      "description": "You asked for a raise with zero confidence and somehow got it. You gain $1,000 x your roll"
+    },
+    {
+      "id": "d6a68c13-bc7e-4e7c-a509-f18583074920",
+      "title": "Industry Slowdown",
+      "description": "Your whole field just got a little poorer. You lose $1,000 x your roll"
+    },
+    {
+      "id": "85e4c333-5c32-460b-9edd-57d8dc918f52",
+      "title": "Hours Quietly Cut",
+      "description": "They reduced your hours and called it \u0027optimizing resources.\u0027 You lose $1,000 x your roll"
+    },
+    {
+      "id": "0666f8bc-9baf-4e75-b850-c3bcb5a440af",
+      "title": "Bonus Structure Changed",
+      "description": "The new bonus plan is somehow worse for everyone except upper management. You lose $1,000 x your roll"
+    },
+    {
+      "id": "60077a3c-a258-46ff-ae08-4b49336fbb81",
+      "title": "Cost-Cutting Measures",
+      "description": "They found savings... mostly in your paycheck. You lose $1,000 x your roll"
+    },
+    {
+      "id": "86d2c339-52c8-47b3-83d6-12074e285541",
+      "title": "Market Correction (Personal Edition)",
+      "description": "Whatever was propping up your pay just stopped. You lose $1,000 x your roll"
     }
   ]
 }
