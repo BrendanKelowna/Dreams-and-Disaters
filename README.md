@@ -1,5 +1,7 @@
 # Dreams and Disasters
 
+Github is hosting here: [https://brendankelowna.github.io/Dreams-and-Disaters/](https://brendankelowna.github.io/Dreams-and-Disaters/)
+
 Dreams and Disasters is a classroom activity for careers and life-planning
 classes. Students explore how career and education choices, income, expenses,
 and unexpected life events can affect their plans over time.
@@ -12,28 +14,23 @@ career decisions for students.
 
 ## Run the Activity
 
-1. Start a local web server in the project folder. For example, with Python
-	installed, run `py -m http.server 8000` in a terminal.
-2. Open `http://localhost:8000` in a web browser.
-3. Open **Settings** and review the players, rules, events, and events-per-round
+1. Open **Settings** and review the players, rules, events, and events-per-round
 	setting. Adjust them for your class before starting.
-4. Use the **Player Sheet** link to open the planning sheet. Students can use it
+2. Use the **Player Sheet** link to open the planning sheet. Students can use it
 	to track goals, income, savings, and expenses during the activity.
-5. On the Home page, select **Play** to create a round. For each assigned
+3. On the Home page, select **Play** to create a round. For each assigned
 	event, click the dice button to roll one die or enter a result from 1 to 6.
 	Read the event and apply the class rules, then update the player sheet.
-6. Use the round navigation to review earlier results. Export history to keep a
+4. Use the round navigation to review earlier results. Export history to keep a
 	copy or import a previous history file.
 
 ## Classroom Setup
 
 - Review the sample rules and event descriptions in Settings; edit, add, or
   remove entries to fit your lesson.
-- Set the number of events per round based on class size and available time.
-- Agree on how students will apply event outcomes before play begins. The
-  sample rules are prompts to customize, not required financial guidance.
+- Set the number of events per round based on class size.
 - The app stores settings and history in the current browser on the current
-  device. Use the export buttons to keep files or transfer data between devices.
+  device. Use the save buttons to Backup files, keep files or transfer data between devices.
 
 ## Project Notes
 
