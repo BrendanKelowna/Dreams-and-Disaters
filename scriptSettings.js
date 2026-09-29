@@ -333,12 +333,13 @@
       field: 'name', label: 'Player', emptyText: 'No players yet.',
     });
     setupCollection({
-      name: 'rules', input: document.getElementById('rules-input'),
+      name: 'rules', input: document.getElementById('rule-title-input'),
       uuidInput: document.getElementById('rule-uuid'),
+      descriptionInput: document.getElementById('rule-description-input'),
       addButton: document.getElementById('add-rule'),
       clearButton: document.getElementById('clear-rule'),
       deleteButton: document.getElementById('delete-rule'), list: document.getElementById('rules-list'),
-      field: 'value', label: 'Rule', emptyText: 'No rules yet.', allowReorder: true,
+      field: 'title', label: 'Rule', emptyText: 'No rules yet.', allowReorder: true,
     });
     setupCollection({
       name: 'events', input: document.getElementById('event-name-input'),

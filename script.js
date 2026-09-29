@@ -78,8 +78,15 @@ function normalizePlayer(player) {
 function normalizeRule(rule) {
   if (typeof rule === 'string') rule = { value: rule };
   if (!rule || typeof rule !== 'object') return null;
-  const value = String(rule.value ?? rule.name ?? '').trim();
-  return value ? { id: String(rule.id || createId()), value } : null;
+  const legacyValue = String(rule.value ?? '').trim();
+  const separatorIndex = legacyValue.indexOf(':');
+  const title = String(rule.title ?? rule.name ?? (
+    separatorIndex >= 0 ? legacyValue.slice(0, separatorIndex) : legacyValue
+  )).trim();
+  const description = String(rule.description ?? (
+    separatorIndex >= 0 ? legacyValue.slice(separatorIndex + 1) : ''
+  )).trim();
+  return title ? { id: String(rule.id || createId()), title, description } : null;
 }
 
 function normalizeEvent(event) {
@@ -103,7 +110,7 @@ function normalizeHistory(history) {
       event: String(result.event ?? ''),
       roll: result.roll == null || result.roll === ''
         ? null
-        : Math.min(12, Math.max(2, Math.floor(Number(result.roll) || 2))),
+        : Math.min(6, Math.max(1, Math.floor(Number(result.roll) || 1))),
     }));
   return { id: String(history.id || createId()), value };
 }
@@ -115,9 +122,21 @@ const normalizers = {
   histories: normalizeHistory,
 };
 
+function normalizeCollection(name, values) {
+  const normalized = values.map(normalizers[name]).filter(Boolean);
+  if (name === 'events') {
+    const usedIds = new Set();
+    normalized.forEach((event) => {
+      while (usedIds.has(event.id)) event.id = createId();
+      usedIds.add(event.id);
+    });
+  }
+  return normalized;
+}
+
 function replaceCollection(name, values) {
   if (!normalizers[name] || !Array.isArray(values)) return false;
-  const normalized = values.map(normalizers[name]).filter(Boolean);
+  const normalized = normalizeCollection(name, values);
   app[name].splice(0, app[name].length, ...normalized);
   return writeStoredJson(STORAGE_KEYS[name], app[name]);
 }
@@ -157,7 +176,7 @@ app.ready = (async () => {
     settings: normalizeSettings({}, defaults.settings),
     players: (Array.isArray(defaults.players) ? defaults.players : []).map(normalizePlayer).filter(Boolean),
     rules: (Array.isArray(defaults.rules) ? defaults.rules : []).map(normalizeRule).filter(Boolean),
-    events: (Array.isArray(defaults.events) ? defaults.events : []).map(normalizeEvent).filter(Boolean),
+    events: normalizeCollection('events', Array.isArray(defaults.events) ? defaults.events : []),
   };
 
   Object.assign(app.settings, normalizeSettings(
@@ -168,7 +187,7 @@ app.ready = (async () => {
     const fallback = name === 'histories' ? [] : app.defaults[name];
     const saved = readStoredJson(STORAGE_KEYS[name], fallback);
     const values = Array.isArray(saved) ? saved : fallback;
-    app[name].splice(0, app[name].length, ...values.map(normalizers[name]).filter(Boolean));
+    app[name].splice(0, app[name].length, ...normalizeCollection(name, values));
   }
 
   writeStoredJson(STORAGE_KEYS.settings, app.settings);

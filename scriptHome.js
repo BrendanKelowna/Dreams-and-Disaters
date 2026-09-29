@@ -48,6 +48,35 @@
     });
   }
 
+  function renderRulesList() {
+    rulesList.replaceChildren();
+    if (!app.rules.length) {
+      const empty = document.createElement('li');
+      empty.className = 'text-light';
+      empty.textContent = 'No rules configured.';
+      rulesList.appendChild(empty);
+      return;
+    }
+
+    app.rules.forEach((rule) => {
+      const item = document.createElement('li');
+      item.className = 'rule-list-item';
+      const title = document.createElement('h4');
+      title.className = 'rule-title m0';
+      title.textContent = rule.title;
+      item.appendChild(title);
+
+      if (rule.description) {
+        const description = document.createElement('div');
+        description.className = 'rule-description';
+        description.textContent = rule.description;
+        item.appendChild(description);
+      }
+
+      rulesList.appendChild(item);
+    });
+  }
+
   function renderHistory() {
     const pageCount = app.histories.length + 1;
     currentPage = Math.max(0, Math.min(currentPage, pageCount - 1));
@@ -102,20 +131,20 @@
 
         const rollInput = document.createElement('input');
         rollInput.type = 'number';
-        rollInput.min = '2';
-        rollInput.max = '12';
+        rollInput.min = '1';
+        rollInput.max = '6';
         rollInput.step = '1';
         rollInput.value = result.roll ?? '';
         rollInput.setAttribute('aria-label', `${event?.title || 'Event'} roll result`);
         rollInput.addEventListener('input', () => {
           const value = rollInput.value === '' ? null : Number(rollInput.value);
-          result.roll = value === null || (Number.isInteger(value) && value >= 2 && value <= 12)
+          result.roll = value === null || (Number.isInteger(value) && value >= 1 && value <= 6)
             ? value
             : null;
           app.persistCollection('histories');
         });
         rollButton.addEventListener('click', () => {
-          result.roll = rollTwoDice();
+          result.roll = rollOneDie();
           rollInput.value = String(result.roll);
           app.persistCollection('histories');
           disableForTwoSeconds(rollButton);
@@ -170,11 +199,11 @@
   function renderPage() {
     renderHistory();
     renderNamedList(playersList, app.players, (player) => player.name, 'No players configured.');
-    renderNamedList(rulesList, app.rules, (rule) => rule.value, 'No rules configured.');
+    renderRulesList();
   }
 
-  function rollTwoDice() {
-    return Math.floor(Math.random() * 6) + 1 + Math.floor(Math.random() * 6) + 1;
+  function rollOneDie() {
+    return Math.floor(Math.random() * 6) + 1;
   }
 
   function playRound() {

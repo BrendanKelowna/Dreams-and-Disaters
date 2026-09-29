@@ -5,7 +5,7 @@ classes. Students explore how career and education choices, income, expenses,
 and unexpected life events can affect their plans over time.
 
 The app helps a teacher run the activity: it assigns events to players, rolls
-two six-sided dice for each event, and keeps a history of rounds. Students use
+one six-sided die for each event, and keeps a history of rounds. Students use
 the event descriptions and class rules to decide what happens next and record
 the effects on their own plans. The app does not calculate budgets or make
 career decisions for students.
@@ -20,7 +20,7 @@ career decisions for students.
 4. Use the **Player Sheet** link to open the planning sheet. Students can use it
 	to track goals, income, savings, and expenses during the activity.
 5. On the Home page, select **Play** to create a round. For each assigned
-	event, click the dice button to roll two dice or enter a result from 2 to 12.
+	event, click the dice button to roll one die or enter a result from 1 to 6.
 	Read the event and apply the class rules, then update the player sheet.
 6. Use the round navigation to review earlier results. Export history to keep a
 	copy or import a previous history file.

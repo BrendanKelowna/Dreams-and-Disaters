@@ -25,7 +25,7 @@ body {
 .fw {
   flex-wrap: wrap;
 }
-li {
+.lsn li {
   list-style: none;
 }
 
@@ -190,7 +190,6 @@ button:disabled:hover {
 
 /* Lists and typography */
 .settings-list {
-  list-style: none;
   padding: 0;
   margin: 0;
   display: grid;
@@ -266,6 +265,25 @@ label {
 }
 
 .print-page {
+
+#rules-list {
+  gap: 14px;
+}
+
+.rule-title,
+.rule-description {
+  display: block;
+  line-height: 1.45;
+}
+
+.rule-title {
+  font-weight: 700;
+}
+
+.rule-description {
+  margin-top: 2px;
+  color: var(--color-text-light);
+}
   width: 816px;
   height: 1056px;
   border-radius: 0 !important;
@@ -355,7 +373,7 @@ label {
   display: flex;
   flex-direction: column;
   gap: var(--space-1);
-  list-style: circle !important;
+  list-style: circle;
   margin-top: 0;
   margin-bottom: 0;
 }
