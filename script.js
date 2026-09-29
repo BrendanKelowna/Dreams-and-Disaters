@@ -101,7 +101,9 @@ function normalizeHistory(history) {
     .map((result) => ({
       player: String(result.player ?? ''),
       event: String(result.event ?? ''),
-      roll: Math.min(12, Math.max(2, Math.floor(Number(result.roll) || 2))),
+      roll: result.roll == null || result.roll === ''
+        ? null
+        : Math.min(12, Math.max(2, Math.floor(Number(result.roll) || 2))),
     }));
   return { id: String(history.id || createId()), value };
 }

@@ -279,7 +279,7 @@ label {
 
 .play-container {
   display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 2fr) minmax(124px, 1fr);
   gap: var(--space-2);
 }
 
@@ -292,6 +292,21 @@ label {
   display: flex;
   justify-content: center;
   text-align: center;
+}
+
+.roll-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.roll-controls input[type="number"] {
+  width: 76px;
+}
+
+.event-roll-button {
+  padding: 10px 12px;
 }
 
 #play-header h2 {

@@ -198,7 +198,11 @@
 
     function deleteEntry() {
       const uuid = uuidInput.value.trim();
-      if (!uuid || !app[name].some((entry) => entry.id === uuid)) return;
+      const selectedEntry = app[name].find((entry) => entry.id === uuid);
+      if (!selectedEntry) return;
+      const entryName = selectedEntry[field];
+      if (!window.confirm(`Delete ${label.toLowerCase()} "${entryName}"? This cannot be undone.`)) return;
+
       app[name] = app[name].filter((entry) => entry.id !== uuid);
       if (name === 'players') {
         sortPlayersAlphabetically();

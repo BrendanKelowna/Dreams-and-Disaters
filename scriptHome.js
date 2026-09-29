@@ -1,7 +1,8 @@
 (() => {
   const app = window.DreamsAndDisasters;
 
-  const rollButton = document.getElementById('roll');
+  const playButton = document.getElementById('play');
+  const deleteButton = document.getElementById('delete');
   const saveButton = document.getElementById('save');
   const openButton = document.getElementById('open');
   const newGameButton = document.getElementById('new-game');
@@ -14,6 +15,13 @@
 
   function makeId() {
     return window.crypto?.randomUUID?.() || `${Date.now()}-${Math.random().toString(16).slice(2)}`;
+  }
+
+  function disableForTwoSeconds(button) {
+    button.disabled = true;
+    window.setTimeout(() => {
+      button.disabled = false;
+    }, 2000);
   }
 
   function makeCell(value, className = '') {
@@ -44,6 +52,7 @@
     const pageCount = app.histories.length + 1;
     currentPage = Math.max(0, Math.min(currentPage, pageCount - 1));
     const currentHistory = app.histories[currentPage];
+    deleteButton.disabled = !currentHistory;
     const eventCount = currentHistory
       ? currentHistory.value.length
       : Math.min(
@@ -58,7 +67,7 @@
       const empty = document.createElement('div');
       empty.className = 'text-light';
       empty.style.gridColumn = '1 / -1';
-      empty.textContent = 'Roll';
+      empty.textContent = 'Select Play to start a round.';
       playContainer.appendChild(empty);
       renderPagination(pageCount);
       return;
@@ -82,10 +91,41 @@
           description.textContent = event.description;
           eventCell.appendChild(description);
         }
+        const rollCell = document.createElement('div');
+        rollCell.className = 'roll-result roll-controls';
+        const rollButton = document.createElement('button');
+        rollButton.type = 'button';
+        rollButton.className = 'event-roll-button';
+        rollButton.title = `Roll for ${event?.title || 'event'}`;
+        rollButton.setAttribute('aria-label', rollButton.title);
+        rollButton.innerHTML = '<i class="fa-solid fa-dice" aria-hidden="true"></i>';
+
+        const rollInput = document.createElement('input');
+        rollInput.type = 'number';
+        rollInput.min = '2';
+        rollInput.max = '12';
+        rollInput.step = '1';
+        rollInput.value = result.roll ?? '';
+        rollInput.setAttribute('aria-label', `${event?.title || 'Event'} roll result`);
+        rollInput.addEventListener('input', () => {
+          const value = rollInput.value === '' ? null : Number(rollInput.value);
+          result.roll = value === null || (Number.isInteger(value) && value >= 2 && value <= 12)
+            ? value
+            : null;
+          app.persistCollection('histories');
+        });
+        rollButton.addEventListener('click', () => {
+          result.roll = rollTwoDice();
+          rollInput.value = String(result.roll);
+          app.persistCollection('histories');
+          disableForTwoSeconds(rollButton);
+        });
+        rollCell.append( rollInput, rollButton);
+
         const cells = [
           makeCell(player?.name || 'Unknown player', 'roll-result'),
           eventCell,
-          makeCell(String(result.roll), 'roll-result roll-value'),
+          rollCell,
         ];
         cells.forEach((cell) => playContainer.appendChild(cell));
       });
@@ -137,7 +177,7 @@
     return Math.floor(Math.random() * 6) + 1 + Math.floor(Math.random() * 6) + 1;
   }
 
-  function rollRound() {
+  function playRound() {
     if (!app.players.length || !app.events.length) {
       window.alert('Add at least one player and one event before rolling.');
       return;
@@ -154,8 +194,7 @@
     for (let index = 0; index < eventCount; index += 1) {
       const event = availableEvents.splice(Math.floor(Math.random() * availableEvents.length), 1)[0];
       const player = availablePlayers.splice(Math.floor(Math.random() * availablePlayers.length), 1)[0];
-      const roll = rollTwoDice();
-      results.push({ player: player.id, event: event.id, roll });
+      results.push({ player: player.id, event: event.id, roll: null });
     }
 
     app.histories.push({ id: makeId(), value: results });
@@ -168,6 +207,16 @@
     if (!window.confirm('Clear all roll history and start a new game?')) return;
     app.replaceCollection('histories', []);
     currentPage = 0;
+    renderHistory();
+  }
+
+  function deleteCurrentHistory() {
+    const history = app.histories[currentPage];
+    if (!history || !window.confirm(`Delete round ${currentPage + 1}? This cannot be undone.`)) return;
+
+    app.histories.splice(currentPage, 1);
+    app.persistCollection('histories');
+    currentPage = Math.min(currentPage, Math.max(0, app.histories.length - 1));
     renderHistory();
   }
 
@@ -212,13 +261,17 @@
 
   async function initHome() {
     await app.ready;
-    rollButton.setAttribute('aria-label', 'Roll a round');
-    rollButton.title = 'Roll a round';
+    playButton.setAttribute('aria-label', 'Play a round');
+    playButton.title = 'Play a round';
     saveButton.setAttribute('aria-label', 'Export history');
     saveButton.title = 'Export history';
     openButton.setAttribute('aria-label', 'Import history');
     openButton.title = 'Import history';
-    rollButton.addEventListener('click', rollRound);
+    playButton.addEventListener('click', () => {
+      playRound();
+      disableForTwoSeconds(playButton);
+    });
+    deleteButton.addEventListener('click', deleteCurrentHistory);
     saveButton.addEventListener('click', downloadHistories);
     newGameButton.addEventListener('click', startNewGame);
     bindHistoryImport();
