@@ -1,476 +1,472 @@
 {
-    "settings":  {
-                     "eventsAmount":  2
-                 },
-    "players":  [
-                    {
-                        "id":  "aed82da4-49b8-44fb-a6f9-ea25a3db3059",
-                        "name":  "Bernard Carlson"
-                    },
-                    {
-                        "id":  "8f19d50b-c504-4718-b065-c2daac2a12b3",
-                        "name":  "Carlton Reilly"
-                    },
-                    {
-                        "id":  "dab5fe39-bc4e-4e94-baab-39d908fe8009",
-                        "name":  "Chang Frederick"
-                    },
-                    {
-                        "id":  "a5ad0c20-2c9f-4a3b-87cb-c5267d0e1622",
-                        "name":  "Chauncey Brennan"
-                    },
-                    {
-                        "id":  "68ecdd58-d871-4b85-9e7d-b07018dcabe5",
-                        "name":  "Jarred Parker"
-                    },
-                    {
-                        "id":  "e7a32e10-177a-4e8b-8414-451acabaf8df",
-                        "name":  "Milton Waters"
-                    },
-                    {
-                        "id":  "cb4d1cc7-4bca-4168-9f15-d731da5d0153",
-                        "name":  "Natasha Clarke"
-                    },
-                    {
-                        "id":  "0b2c47f1-7860-438c-8b38-e276891e74c9",
-                        "name":  "Otis Frey"
-                    },
-                    {
-                        "id":  "821c8863-f97a-4a09-9176-4421e9a3d62d",
-                        "name":  "Ralph Bartlett"
-                    },
-                    {
-                        "id":  "d3b34c27-758f-4bb3-bb40-5ea0b2e5102b",
-                        "name":  "Summer Gardner"
-                    }
-                ],
-    "rules":  [
-                  {
-                      "id":  "dd4999d0-44ed-4ed0-966b-b451a73e2f08",
-                      "title":  "General",
-                      "description":  "Rules are guidelines; players may choose differently if they can justify it."
-                  },
-                  {
-                      "id":  "8e5618cf-984d-4e64-9cbf-455cb48a601a",
-                      "title":  "Yearly order",
-                      "description":  "Calculate income â†’ marriage â†’ tax â†’ personal expenses â†’ rent/mortgage â†’ other expenses â†’ debt. Add what\u0027s left to savings or debt."
-                  },
-                  {
-                      "id":  "6c0306cb-7db3-4b55-b8ac-c9a801a43ec4",
-                      "title":  "Minimum-wage job",
-                      "description":  "$38,000/year; automatic success."
-                  },
-                  {
-                      "id":  "801102b3-72df-4c2c-a38c-e0fb864f5879",
-                      "title":  "Advanced job",
-                      "description":  "Roll 4-6 to earn $50,000/year."
-                  },
-                  {
-                      "id":  "12c40d72-97de-4d31-8bc7-8a2a42f4ac3c",
-                      "title":  "Career job",
-                      "description":  "Roll 4-6 to get the job. Required education must be completed."
-                  },
-                  {
-                      "id":  "0d908334-6ffd-43e9-8391-7b98e4a997ed",
-                      "title":  "Work and school",
-                      "description":  "Until age 25, you may have full-time work or school plus part-time work or school."
-                  },
-                  {
-                      "id":  "0de151bb-4b93-436a-9809-572ac25058b5",
-                      "title":  "Marriage income",
-                      "description":  "Married players increase their combined income by 25% (multiply by 1.25)."
-                  },
-                  {
-                      "id":  "3023a0da-ca38-4277-ab55-f7c9d53a4134",
-                      "title":  "Personal expenses",
-                      "description":  "Pay 20% of after-tax income for food, phone, insurance, gas, and other personal expenses (multiply remaining income by 0.8)."
-                  },
-                  {
-                      "id":  "51bb2bdb-cca7-4f35-8beb-79bb34b0dfb8",
-                      "title":  "Children",
-                      "description":  "Each child costs $8,000/year."
-                  },
-                  {
-                      "id":  "ae6255bf-f08c-4401-968f-24d5891c2a7a",
-                      "title":  "Living at home",
-                      "description":  "You may live at home until age 23."
-                  },
-                  {
-                      "id":  "09283d86-d5be-48aa-ac32-bfa4a154bf3a",
-                      "title":  "Rent",
-                      "description":  "$14,400/year ($1,200/month)."
-                  },
-                  {
-                      "id":  "525c4856-2920-422f-92ef-1fe7bd749a92",
-                      "title":  "Home purchase",
-                      "description":  "The minimum down payment is 15%."
-                  },
-                  {
-                      "id":  "47ccd688-e4e8-4374-b0c2-f848f999454b",
-                      "title":  "Home prices",
-                      "description":  "Condo: $575,000; townhouse: $835,000; detached: $1,100,000."
-                  },
-                  {
-                      "id":  "f1030cde-9fd5-47d3-8655-72fedb87239a",
-                      "title":  "Mortgage",
-                      "description":  "Maximum 25 years at 0% annual interest. Calculate annual payments as (house price âˆ’ down payment) / payment years."
-                  },
-                  {
-                      "id":  "32230175-6adf-4bf9-9ffc-96c91a58e75b",
-                      "title":  "Transportation",
-                      "description":  "Public transit costs $0; the minimum car purchase price is $5,000."
-                  },
-                  {
-                      "id":  "53675560-49fd-42ce-abe4-33dbb5a8bc72",
-                      "title":  "Education",
-                      "description":  "Post-secondary education costs $8,000/year."
-                  },
-                  {
-                      "id":  "f1a6f566-d998-4420-8c70-31825d3a573f",
-                      "title":  "Savings",
-                      "description":  "Savings earn 5% annually (multiply by 1.05)."
-                  },
-                  {
-                      "id":  "5c540537-4b3b-4385-a8d3-a9f916ab03d1",
-                      "title":  "Debt",
-                      "description":  "Debt accrues 10% interest annually (multiply by 1.1)."
-                  },
-                  {
-                      "id":  "4bca48b5-8a22-4c17-b3b0-4e850ebb6d21",
-                      "title":  "Debt versus savings",
-                      "description":  "After expenses, choose how much money to put toward debt; the rest goes to savings."
-                  },
-                  {
-                      "id":  "fe0bc66e-975b-4855-b648-272a9af31f13",
-                      "title":  "Selling a house",
-                      "description":  "When you sell your house, you receive 75% of its equity (house value âˆ’ remaining mortgage)."
-                  },
-                  {
-                      "id":  "b0e5962d-42aa-4522-a5b1-284d83de73a6",
-                      "title":  "Divorce",
-                      "description":  "If you divorce, lose 50% of your savings and $5,000."
-                  },
-                  {
-                      "id":  "97fac21b-dab8-4f5c-90b8-d8979419e99d",
-                      "title":  "Marriage",
-                      "description":  "Roll 4-6 to get married."
-                  }
-              ],
-    "events":  [
-                   {
-                       "id":  "51038a30-838f-408a-bbaf-59651a1b8051",
-                       "title":  "Car crash",
-                       "description":  "Watch out! 1-3: Your car is totaled; add half its value to your savings. 4-6: That was close."
-                   },
-                   {
-                       "id":  "151cede0-a2d0-4c33-9785-c7f9acb75b08",
-                       "title":  "Lottery Win",
-                       "description":  "You bought the right ticket at the right time. Add 1,000 Ã— your roll to savings."
-                   },
-                   {
-                       "id":  "36d77851-74b8-49f0-9a83-3deeb0129f83",
-                       "title":  "Unexpected Inheritance",
-                       "description":  "Great-Uncle Bob apparently liked you more than everyone else. 1-2: Gain $25,000. 3-6: Gain $10,000."
-                   },
-                   {
-                       "id":  "d070f46d-216b-48fb-9bd7-b3c7455957fb",
-                       "title":  "Found Money",
-                       "description":  "You check an old account and discover money you forgot existed. 1-2: Gain $10,000. 3-6: Gain $5,000."
-                   },
-                   {
-                       "id":  "6f24c068-da83-43a9-95aa-2a676f9fffa0",
-                       "title":  "Tax Refund",
-                       "description":  "Apparently you gave the government too much money. 1-3: Gain $10,000. 4-6: They kept it. Somehow."
-                   },
-                   {
-                       "id":  "114f3d59-ae1a-4d95-bacb-4c296d9aca37",
-                       "title":  "Side Hustle",
-                       "description":  "Your questionable idea actually makes money. 1-2: Gain $10,000. 3-6: Gain $5,000."
-                   },
-                   {
-                       "id":  "4d5e0dcc-a4ce-4ff0-ba74-4c6491812dd8",
-                       "title":  "Lucky Break",
-                       "description":  "Right place, right time. 1-2: Gain $5,000. 3-6: You were almost lucky. Nothing happens."
-                   },
-                   {
-                       "id":  "f851473d-7765-44e0-b793-d85e12c57646",
-                       "title":  "Garage Treasure",
-                       "description":  "You find something valuable buried under 15 years of junk. 1-3: Gain $5,000. 4-6: Just garbage. Lots and lots of garbage."
-                   },
-                   {
-                       "id":  "b86c1db6-6d53-467d-90f5-fdb14ea97c7e",
-                       "title":  "Old Investment",
-                       "description":  "That thing you bought years ago actually went up. 1-2: Gain $5,000. 3-6: You sold too early. Nothing happens."
-                   },
-                   {
-                       "id":  "a2cda1bc-7ef1-480f-b1bf-e592fe497112",
-                       "title":  "Car Sale",
-                       "description":  "Someone really wants your old car. 1-3: Gain $5,000. 4-6: They changed their mind."
-                   },
-                   {
-                       "id":  "a541c270-5400-4978-9d4b-ea8a290e3b3d",
-                       "title":  "Bonus!",
-                       "description":  "Your boss noticed you actually showed up to work. 1-3: Gain $5,000. 4-6: Your boss noticed. That\u0027s it."
-                   },
-                   {
-                       "id":  "5f9dd715-b993-4fde-9d42-afb1e8ed6482",
-                       "title":  "Home Repair",
-                       "description":  "Your roof has decided that it doesn\u0027t like being a roof anymore. 1-3: Lose $5,000. 4-6: You caught it before it got expensive."
-                   },
-                   {
-                       "id":  "0e93c8b8-d6dc-4f56-870f-32f642b143f6",
-                       "title":  "Car Repair",
-                       "description":  "The check-engine light has evolved into a check-bank-account light. 1-3: Lose $5,000. 4-6: It was just the gas cap. You\u0027re saved."
-                   },
-                   {
-                       "id":  "1dceabfa-c9db-4bd6-9f04-7324896af59d",
-                       "title":  "Vet Bill",
-                       "description":  "Your pet has discovered the most expensive way possible to be sick. 1-4: Lose $5,000. 5-6: False alarm! Your pet is fine."
-                   },
-                   {
-                       "id":  "5dd7a04c-8706-41da-bf0f-eb145b1f3441",
-                       "title":  "Bad Investment",
-                       "description":  "It sounded like a great idea at the time. It wasn\u0027t. 1-4: Lose $5,000. 5-6: You got out just in time."
-                   },
-                   {
-                       "id":  "affc6442-92ee-4ae8-9b9c-6fb06c7b9b44",
-                       "title":  "Oops, That\u0027s Broken",
-                       "description":  "You broke something that was working perfectly yesterday. 1-3: Lose $5,000. 4-6: You fixed it yourself. Somehow."
-                   },
-                   {
-                       "id":  "492e1ddd-6c7b-4a79-9912-b82903885068",
-                       "title":  "Emergency Expense",
-                       "description":  "Life has presented you with an invoice. 1-3: Lose $10,000. 4-6: Insurance actually covered it."
-                   },
-                   {
-                       "id":  "a70175f9-fb30-4105-ab17-4da0199b4347",
-                       "title":  "Car Trouble",
-                       "description":  "The mechanic says, \u0027Well... that\u0027s not good.\u0027 1-3: Lose $10,000. 4-6: It was only a loose wire."
-                   },
-                   {
-                       "id":  "84ca8e7e-6210-47dd-ab51-ea8d4880cf24",
-                       "title":  "Lawsuit",
-                       "description":  "Congratulations! You\u0027re involved in a legal dispute. 1-3: Lose $10,000. 4-6: You settle it without paying."
-                   },
-                   {
-                       "id":  "d433455d-3b76-4e31-8d08-920e835a45d8",
-                       "title":  "Roof Leak",
-                       "description":  "It\u0027s raining inside now. That\u0027s generally considered bad. 1-4: Lose $10,000. 5-6: Your insurance saves you."
-                   },
-                   {
-                       "id":  "6ac82411-ac81-4546-91ce-f74a5034ac47",
-                       "title":  "Medical Bill",
-                       "description":  "You\u0027re fine! Your bank account isn\u0027t. 1-3: Lose $10,000. 4-6: Your insurance covers it."
-                   },
-                   {
-                       "id":  "30bac5cf-9ecf-40f5-a2e7-18ece9bb51d1",
-                       "title":  "Terrible Investment",
-                       "description":  "You were promised guaranteed returns. They forgot to mention the guaranteed part was the loss. 1-4: Lose $10,000. 5-6: You listened to your gut and didn\u0027t invest."
-                   },
-                   {
-                       "id":  "05dd32f9-e767-4d2c-b86c-cdb781a938e5",
-                       "title":  "Major Repair",
-                       "description":  "The thing you hoped wouldn\u0027t break has broken. 1-4: Lose $25,000. 5-6: You found a cheap fix. Lose $5,000 instead."
-                   },
-                   {
-                       "id":  "c875c9dc-9ae9-47c8-89fe-7eb212528ba4",
-                       "title":  "Financial Disaster",
-                       "description":  "Everything that could go wrong financially decided to happen at once. 1-4: Lose $25,000. 5-6: You dodge the worst of it. Lose $5,000."
-                   },
-                   {
-                       "id":  "e00854a6-141e-42a1-98e8-333579412e6f",
-                       "title":  "The Expensive Mistake",
-                       "description":  "\u0027How much could it possibly cost?\u0027 Famous last words. 1-3: Lose $25,000. 4-6: Lose $10,000."
-                   },
-                   {
-                       "id":  "7383da1e-24b9-44ba-9960-e14ab65bfac5",
-                       "title":  "Oops, A Baby",
-                       "description":  "Positive! Probably! 1-3: Add 1 child. 4-6: Choose whether to add the child."
-                   },
-                   {
-                       "id":  "6b516eff-1ea7-423c-92ac-0c042bff4d31",
-                       "title":  "Unexpected Baby",
-                       "description":  "The family just got a little bigger. 1-2: Add 1 child. 3-6: False alarm! No baby."
-                   },
-                   {
-                       "id":  "72178ee9-fd01-432c-858e-7e4206a1a04e",
-                       "title":  "Baby Fever",
-                       "description":  "You thought you were done. Apparently, your partner wasn\u0027t. 1-3: Add 1 child. 4-6: You talked them out of it."
-                   },
-                   {
-                       "id":  "45f572cf-5cca-45db-a4a6-65e413ba8cc7",
-                       "title":  "Love at First Sight",
-                       "description":  "You met someone who doesn\u0027t immediately run away after hearing about your finances. 1-3: Get married. 4-6: Choose whether to get married."
-                   },
-                   {
-                       "id":  "d50f17ad-83d5-4a3d-b5f6-12102646aaa3",
-                       "title":  "The Big Question",
-                       "description":  "You popped the question. They said yes! Probably. 1-3: Get married. 4-6: You decide to wait."
-                   },
-                   {
-                       "id":  "ad6b19ba-168e-4247-8df0-8d01ef86dce3",
-                       "title":  "Cheater!",
-                       "description":  "Your partner catches you. 1-3: Divorce. 4-6: You went to counseling and worked it out."
-                   },
-                   {
-                       "id":  "e7c07999-757e-4b38-9345-c84dc96a9f05",
-                       "title":  "We Need to Talk",
-                       "description":  "You knew it wasn\u0027t going to be good when they started with those four words. 1-3: Divorce. 4-6: You work things out."
-                   },
-                   {
-                       "id":  "fe5e44d7-d253-4a2b-9883-a97420346678",
-                       "title":  "The Job Interview",
-                       "description":  "Somehow they didn\u0027t notice you have no idea what you\u0027re doing. 1-3: Get a job. 4-6: You didn\u0027t get it."
-                   },
-                   {
-                       "id":  "cefb1f99-ae47-4357-a960-e3d8c40f24db",
-                       "title":  "Right Place, Right Time",
-                       "description":  "Your friend knows a guy who knows a guy. 1-3: Get a job. 4-6: The guy doesn\u0027t know a guy after all."
-                   },
-                   {
-                       "id":  "41f60213-f669-48fd-8e98-e25042ee62a9",
-                       "title":  "Layoffs!",
-                       "description":  "Corporate says you\u0027re \u0027part of the family.\u0027 Then they fire you. 1-3: Lose your job this year. 4-6: You made the cut. What did you do to make that happen?"
-                   },
-                   {
-                       "id":  "a251def7-194e-4be9-82aa-d3944d963f07",
-                       "title":  "Fired!",
-                       "description":  "\u0027We\u0027re going in a different direction.\u0027 That direction apparently doesn\u0027t include you. 1-4: Lose your job. 5-6: You talk your way out of it."
-                   },
-                   {
-                       "id":  "f27a6402-ba2f-412f-8588-7db146b52747",
-                       "title":  "Boss From Hell",
-                       "description":  "You finally snap after your boss sends another email marked \u0027URGENT.\u0027 1-3: Lose your job this year. 4-6: You apologize and keep your job."
-                   },
-                   {
-                       "id":  "44570ce7-493b-4923-af45-5cd79f111197",
-                       "title":  "The Company Closed",
-                       "description":  "Your workplace is gone. Unfortunately, so is your paycheck. 1-4: Lose your job this year. 5-6: You transfer to another location."
-                   },
-                   {
-                       "id":  "d9c078aa-5dfd-4424-8fe8-7b11dc64c7ee",
-                       "title":  "Monday Morning",
-                       "description":  "You wake up and realize you absolutely cannot do this job for another 30 years. 1-3: Lose your job this year. 4-6: Coffee fixes everything."
-                   },
-                   {
-                       "id":  "1034efc3-523e-45e2-9850-8fb7290bbee1",
-                       "title":  "I Quit!",
-                       "description":  "You hand in your resignation with absolutely no plan whatsoever. 1-3: Lose your job. 4-6: You realize you need the money and take it back."
-                   },
-                   {
-                       "id":  "bb954bb9-f9e5-4804-a32b-ba562029e7de",
-                       "title":  "Career Crisis",
-                       "description":  "You stare at your career and think, \u0027Is this really it?\u0027 1-2: Leave your career permanently. 3-6: You decide to stick with it."
-                   },
-                   {
-                       "id":  "0a5f8a86-0fef-45f0-b997-ab7a0e942370",
-                       "title":  "Tripped",
-                       "description":  "You trip over a slightly raised piece of concrete. 1-3: Lose 75% of your income this year; you\u0027re on disability this year. 4-6: \u0027Tis but a scratch."
-                   },
-                   {
-                       "id":  "bdedd5e5-06b8-4b00-93d2-3e7d8f196ede",
-                       "title":  "Car Crash",
-                       "description":  "Watch out! 1-3: Your car is totaled. 4-6: That was close."
-                   },
-                   {
-                       "id":  "6801715a-64b4-43fe-80a4-618b5d9a1e72",
-                       "title":  "Bad Luck",
-                       "description":  "You somehow manage to injure yourself doing something completely normal. 1-3: You cannot work this year. 4-6: You\u0027re fine. Somehow."
-                   },
-                   {
-                       "id":  "8ea7187a-278a-46d1-878b-bcf5ee214f23",
-                       "title":  "Free Money!",
-                       "description":  "The government, school, or some mysterious organization has decided to help you. 1-2: Free reroll. 3-6: They changed their mind."
-                   },
-                   {
-                       "id":  "ed5738ba-b87d-456f-bbc2-5f4ae511cd4d",
-                       "title":  "Second Chance",
-                       "description":  "That card was terrible. Pretend it never happened. 1-2: Free reroll. 3-6: Nope. You have to live with it."
-                   },
-                   {
-                       "id":  "bdca6eec-6ee0-4a75-92e3-2223e4f7f2df",
-                       "title":  "Win a Car!",
-                       "description":  "Congratulations! You now own a vehicle you didn\u0027t pay for. 1-2: Gain a car. 3-6: The dealership calls. It was a clerical error."
-                   },
-                   {
-                       "id":  "60ac547f-6fe8-4532-b25d-741d6def4bc8",
-                       "title":  "Car Giveaway",
-                       "description":  "You entered a contest for a car and somehow actually won. 1-2: Gain a car. 3-6: You were the runner-up."
-                   },
-                   {
-                       "id":  "ffab0ed0-fcc5-4dc5-a92e-87cc0a5f0b14",
-                       "title":  "Car Theft",
-                       "description":  "You go outside and discover your car has gone on an unscheduled vacation. 1-4: Lose your car. 5-6: You find it parked three blocks away."
-                   },
-                   {
-                       "id":  "815d47b7-67b9-49fe-b569-bdb7609e965e",
-                       "title":  "Car Crash",
-                       "description":  "You and your car had a disagreement with another vehicle. 1-4: Lose your car. 5-6: It can be repaired."
-                   },
-                   {
-                       "id":  "0b05ae07-a085-435e-a1f7-5fffffafbdd9",
-                       "title":  "Engine Explodes",
-                       "description":  "Your car has decided it would rather be a very expensive lawn ornament. 1-4: Lose your car. 5-6: Lose $5,000 instead."
-                   },
-                   {
-                       "id":  "9aa336de-c13a-41c4-ab9c-9a373cf61e93",
-                       "title":  "Where\u0027s My Car?",
-                       "description":  "You definitely parked it here... right? 1-3: Lose your car. 4-6: You find it. You just forgot where you parked."
-                   },
-                   {
-                       "id":  "63c22cd4-2b17-4ce7-89d8-6046cc14f8c1",
-                       "title":  "The Mechanic",
-                       "description":  "\u0027It\u0027s going to be cheaper to buy another car.\u0027 1-4: Lose your car. 5-6: Lose $5,000 instead."
-                   },
-                   {
-                       "id":  "216ec44d-756b-437e-9141-7fb7e6d41c39",
-                       "title":  "Education Setback",
-                       "description":  "Your professor has discovered that you are, in fact, not finished. 1-3: Education delayed 1 year. 4-6: You convince them to let you finish."
-                   },
-                   {
-                       "id":  "c24e0d6f-04ce-4791-81e0-f7abe0217683",
-                       "title":  "Registration",
-                       "description":  "Problem: You missed an important deadline. 1-3: Education delayed 1 year. 4-6: They make an exception."
-                   },
-                   {
-                       "id":  "0ca8c38d-a269-4b40-a624-fbeb8c2bfbb3",
-                       "title":  "Scholarship!",
-                       "description":  "Someone looked at your tuition bill and decided to save you from it. 1-3: Education is free this year. 4-6: You got a partial scholarship. Pay half."
-                   },
-                   {
-                       "id":  "f5e8e0bd-3595-4255-a57e-04becb1b956a",
-                       "title":  "Free Tuition",
-                       "description":  "Somehow, you found the magical phrase \u0027fully funded.\u0027 1-2: Education is free this year. 3-6: You only get half off."
-                   },
-                   {
-                       "id":  "3a2c248d-a771-4460-b6cc-6e00176b1359",
-                       "title":  "Bankruptcy",
-                       "description":  "You have officially entered financial \u0027oops.\u0027 1-4: Debt becomes $0, but you cannot buy a house or car for 3 years. 5-6: You avoid bankruptcy. Lose $25,000."
-                   },
-                   {
-                       "id":  "9b721628-d5ef-4afa-b1b8-79127b721ba8",
-                       "title":  "Promotion!",
-                       "description":  "Your boss finally realizes that replacing you would be difficult. 1-3: Income increases by $10,000/year. 4-6: Your boss says \u0027maybe next year.\u0027"
-                   },
-                   {
-                       "id":  "263a8c18-1966-49f5-9778-2e5e5d87555c",
-                       "title":  "Forced Sale",
-                       "description":  "The bank, circumstances, or life itself says it\u0027s time to move. 1-4: Sell your house. 5-6: You manage to keep it."
-                   },
-                   {
-                       "id":  "cc779d06-238c-4444-bbfc-50fb94505b19",
-                       "title":  "Noticed Your Hard Work",
-                       "description":  "You\u0027ve been doing your job well enough that someone finally noticed (yeah right). 1-3: Income increases by $5,000/year. 4-6: Your boss gives you a pizza party instead."
-                   },
-                   {
-                       "id":  "477ae9d6-bdb1-4add-a5b7-14c0859d028b",
-                       "title":  "The Brown-Noser",
-                       "description":  "You brought your boss coffee for 4,245 consecutive days. It worked. 1-3: Income increases by $5,000/year. 4-6: Your boss starts asking for cream and sugar too. No raise."
-                   },
-                   {
-                       "id":  "a0c67526-bd0c-4380-90c3-fa2d86cc02be",
-                       "title":  "House Flipper",
-                       "description":  "You sell your house at the perfect time. 1-3: Sell your house and receive 110% of the equity. 4-6: Sell your house and receive 100% of the equity."
-                   }
-               ]
+  "settings": {
+    "eventsAmount": 2
+  },
+  "players": [
+    {
+      "id": "aed82da4-49b8-44fb-a6f9-ea25a3db3059",
+      "name": "Bernard Carlson"
+    },
+    {
+      "id": "8f19d50b-c504-4718-b065-c2daac2a12b3",
+      "name": "Carlton Reilly"
+    },
+    {
+      "id": "dab5fe39-bc4e-4e94-baab-39d908fe8009",
+      "name": "Chang Frederick"
+    },
+    {
+      "id": "a5ad0c20-2c9f-4a3b-87cb-c5267d0e1622",
+      "name": "Chauncey Brennan"
+    },
+    {
+      "id": "68ecdd58-d871-4b85-9e7d-b07018dcabe5",
+      "name": "Jarred Parker"
+    },
+    {
+      "id": "e7a32e10-177a-4e8b-8414-451acabaf8df",
+      "name": "Milton Waters"
+    },
+    {
+      "id": "cb4d1cc7-4bca-4168-9f15-d731da5d0153",
+      "name": "Natasha Clarke"
+    },
+    {
+      "id": "0b2c47f1-7860-438c-8b38-e276891e74c9",
+      "name": "Otis Frey"
+    },
+    {
+      "id": "821c8863-f97a-4a09-9176-4421e9a3d62d",
+      "name": "Ralph Bartlett"
+    },
+    {
+      "id": "d3b34c27-758f-4bb3-bb40-5ea0b2e5102b",
+      "name": "Summer Gardner"
+    }
+  ],
+  "rules": [
+    {
+      "id": "dd4999d0-44ed-4ed0-966b-b451a73e2f08",
+      "title": "General",
+      "description": "Rules are guidelines; players may choose differently if they can justify it."
+    },
+    {
+      "id": "8e5618cf-984d-4e64-9cbf-455cb48a601a",
+      "title": "Yearly order",
+      "description": "Calculate income > marriage > tax > personal expenses > rent/mortgage > other expenses > debt. Add what's left to savings or debt."
+    },
+    {
+      "id": "6c0306cb-7db3-4b55-b8ac-c9a801a43ec4",
+      "title": "Minimum-wage job",
+      "description": "$38,000/year; automatic success."
+    },
+    {
+      "id": "801102b3-72df-4c2c-a38c-e0fb864f5879",
+      "title": "Advanced job",
+      "description": "Roll 4-6 to earn $50,000/year."
+    },
+    {
+      "id": "12c40d72-97de-4d31-8bc7-8a2a42f4ac3c",
+      "title": "Career job",
+      "description": "Roll 4-6 to get the job. Required education must be completed."
+    },
+    {
+      "id": "0d908334-6ffd-43e9-8391-7b98e4a997ed",
+      "title": "Work and school",
+      "description": "Until age 25, you may have full-time work or school plus part-time work or school."
+    },
+    {
+      "id": "0de151bb-4b93-436a-9809-572ac25058b5",
+      "title": "Marriage income",
+      "description": "Married players increase their combined income by 25% (multiply by 1.25)."
+    },
+    {
+      "id": "3023a0da-ca38-4277-ab55-f7c9d53a4134",
+      "title": "Personal expenses",
+      "description": "Pay 20% of after-tax income for food, phone, insurance, gas, and other personal expenses (multiply remaining income by 0.8)."
+    },
+    {
+      "id": "51bb2bdb-cca7-4f35-8beb-79bb34b0dfb8",
+      "title": "Children",
+      "description": "Each child costs $8,000/year."
+    },
+    {
+      "id": "ae6255bf-f08c-4401-968f-24d5891c2a7a",
+      "title": "Living at home",
+      "description": "You may live at home until age 23."
+    },
+    {
+      "id": "09283d86-d5be-48aa-ac32-bfa4a154bf3a",
+      "title": "Rent",
+      "description": "$14,400/year ($1,200/month)."
+    },
+    {
+      "id": "525c4856-2920-422f-92ef-1fe7bd749a92",
+      "title": "Home purchase",
+      "description": "The minimum down payment is 15%."
+    },
+    {
+      "id": "47ccd688-e4e8-4374-b0c2-f848f999454b",
+      "title": "Home prices",
+      "description": "Condo: $575,000; townhouse: $835,000; detached: $1,100,000."
+    },
+    {
+      "id": "f1030cde-9fd5-47d3-8655-72fedb87239a",
+      "title": "Mortgage",
+      "description": "Maximum 25 years at 0% annual interest. Calculate annual payments as (house price âˆ’ down payment) / payment years."
+    },
+    {
+      "id": "32230175-6adf-4bf9-9ffc-96c91a58e75b",
+      "title": "Transportation",
+      "description": "Public transit costs $0; the minimum car purchase price is $5,000."
+    },
+    {
+      "id": "53675560-49fd-42ce-abe4-33dbb5a8bc72",
+      "title": "Education",
+      "description": "Post-secondary education costs $8,000/year."
+    },
+    {
+      "id": "f1a6f566-d998-4420-8c70-31825d3a573f",
+      "title": "Savings",
+      "description": "Savings earn 5% annually (multiply by 1.05)."
+    },
+    {
+      "id": "5c540537-4b3b-4385-a8d3-a9f916ab03d1",
+      "title": "Debt",
+      "description": "Debt accrues 10% interest annually (multiply by 1.1)."
+    },
+    {
+      "id": "4bca48b5-8a22-4c17-b3b0-4e850ebb6d21",
+      "title": "Debt versus savings",
+      "description": "After expenses, choose how much money to put toward debt; the rest goes to savings."
+    },
+    {
+      "id": "fe0bc66e-975b-4855-b648-272a9af31f13",
+      "title": "Selling a house",
+      "description": "When you sell your house, you receive 75% of its equity (house value âˆ’ remaining mortgage)."
+    },
+    {
+      "id": "b0e5962d-42aa-4522-a5b1-284d83de73a6",
+      "title": "Divorce",
+      "description": "If you divorce, lose 50% of your savings and $5,000."
+    },
+    {
+      "id": "97fac21b-dab8-4f5c-90b8-d8979419e99d",
+      "title": "Marriage",
+      "description": "Roll 4-6 to get married."
+    }
+  ],
+
+  "events": [
+    {
+      "id": "51038a30-838f-408a-bbaf-59651a1b8051",
+      "title": "Car crash",
+      "description": "Watch out! Your car is totaled. Roll a 4: you manage to save it, that was close."
+    },
+    {
+      "id": "151cede0-a2d0-4c33-9785-c7f9acb75b08",
+      "title": "Lottery Win",
+      "description": "You bought the right ticket at the right time. Add 1,000 × your roll to savings."
+    },
+    {
+      "id": "36d77851-74b8-49f0-9a83-3deeb0129f83",
+      "title": "Unexpected Inheritance",
+      "description": "Great-Uncle Bob apparently liked you more than everyone else. Gain $25,000. Roll a 1: Oops, it was only $2,500."
+    },
+    {
+      "id": "d070f46d-216b-48fb-9bd7-b3c7455957fb",
+      "title": "Found Money",
+      "description": "You check an old account and discover money you forgot existed. Gain $10,000. Roll a 2: Sorry that was in yen $1,000"
+    },
+    {
+      "id": "6f24c068-da83-43a9-95aa-2a676f9fffa0",
+      "title": "Tax Refund",
+      "description": "Apparently you gave the government too much money. Gain $10,000. Roll a 3: they kept it. Somehow."
+    },
+    {
+      "id": "114f3d59-ae1a-4d95-bacb-4c296d9aca37",
+      "title": "Side Hustle",
+      "description": "Your questionable idea actually makes money. Gain $10,000. Roll a 4: More questions then money $1000."
+    },
+    {
+      "id": "4d5e0dcc-a4ce-4ff0-ba74-4c6491812dd8",
+      "title": "Lucky Break",
+      "description": "Right place, right time. Gain $5,000. Roll a 5: you were almost lucky. Nothing happens."
+    },
+    {
+      "id": "f851473d-7765-44e0-b793-d85e12c57646",
+      "title": "Garage Treasure",
+      "description": "You find something valuable buried under 15 years of junk. Gain $5,000. Roll a 6: just garbage. Lots and lots of garbage."
+    },
+    {
+      "id": "b86c1db6-6d53-467d-90f5-fdb14ea97c7e",
+      "title": "Old Investment",
+      "description": "That thing you bought years ago actually went up. Gain $5,000. Roll a 1: you sold too early. Nothing happens."
+    },
+    {
+      "id": "a2cda1bc-7ef1-480f-b1bf-e592fe497112",
+      "title": "Car Sale",
+      "description": "Someone really wants your old car. Gain $5,000. Roll a 2: they changed their mind."
+    },
+    {
+      "id": "a541c270-5400-4978-9d4b-ea8a290e3b3d",
+      "title": "Bonus!",
+      "description": "Your boss noticed you actually showed up to work. Gain $5,000. Roll a 3: your boss noticed. That's it."
+    },
+    {
+      "id": "5f9dd715-b993-4fde-9d42-afb1e8ed6482",
+      "title": "Home Repair",
+      "description": "Your roof has decided that it doesn't like being a roof anymore. Lose $5,000. Roll a 4: you caught it before it got expensive."
+    },
+    {
+      "id": "0e93c8b8-d6dc-4f56-870f-32f642b143f6",
+      "title": "Car Repair",
+      "description": "The check-engine light has evolved into a check-bank-account light. Lose $5,000. Roll a 5: it was just the gas cap. You're saved."
+    },
+    {
+      "id": "1dceabfa-c9db-4bd6-9f04-7324896af59d",
+      "title": "Vet Bill",
+      "description": "Your pet has discovered the most expensive way possible to be sick. Lose $5,000. Roll a 6: false alarm! Your pet is fine."
+    },
+    {
+      "id": "5dd7a04c-8706-41da-bf0f-eb145b1f3441",
+      "title": "Bad Investment",
+      "description": "It sounded like a great idea at the time. It wasn't. Lose $5,000. Roll a 1: you got out just in time."
+    },
+    {
+      "id": "affc6442-92ee-4ae8-9b9c-6fb06c7b9b44",
+      "title": "Oops, That's Broken",
+      "description": "You broke something that was working perfectly yesterday. Lose $5,000. Roll a 2: you fixed it yourself. Somehow."
+    },
+    {
+      "id": "492e1ddd-6c7b-4a79-9912-b82903885068",
+      "title": "Emergency Expense",
+      "description": "Life has presented you with an invoice. Lose $10,000. Roll a 3: insurance actually covered it."
+    },
+    {
+      "id": "a70175f9-fb30-4105-ab17-4da0199b4347",
+      "title": "Car Trouble",
+      "description": "The mechanic says, 'Well... that's not good.' Lose $10,000. Roll a 4: it was only a loose wire."
+    },
+    {
+      "id": "84ca8e7e-6210-47dd-ab51-ea8d4880cf24",
+      "title": "Lawsuit",
+      "description": "Congratulations! You're involved in a legal dispute. Lose $10,000. Roll a 5: you settle it without paying."
+    },
+    {
+      "id": "d433455d-3b76-4e31-8d08-920e835a45d8",
+      "title": "Roof Leak",
+      "description": "It's raining inside now. That's generally considered bad. Lose $10,000. Roll a 6: your insurance saves you."
+    },
+    {
+      "id": "6ac82411-ac81-4546-91ce-f74a5034ac47",
+      "title": "Medical Bill",
+      "description": "You're fine! Your bank account isn't. Lose $10,000. Roll a 1: your insurance covers it."
+    },
+    {
+      "id": "30bac5cf-9ecf-40f5-a2e7-18ece9bb51d1",
+      "title": "Terrible Investment",
+      "description": "You were promised guaranteed returns. They forgot to mention the guaranteed part was the loss. Lose $10,000. Roll a 2: you listened to your gut and didn't invest."
+    },
+    {
+      "id": "05dd32f9-e767-4d2c-b86c-cdb781a938e5",
+      "title": "Major Repair",
+      "description": "The thing you hoped wouldn't break has broken. Lose $25,000. Roll a 3: you found a cheap fix. Lose $5,000 instead."
+    },
+    {
+      "id": "c875c9dc-9ae9-47c8-89fe-7eb212528ba4",
+      "title": "Financial Disaster",
+      "description": "Everything that could go wrong financially decided to happen at once. Lose $25,000. Roll a 4: you dodge the worst of it. Lose $5,000."
+    },
+    {
+      "id": "e00854a6-141e-42a1-98e8-333579412e6f",
+      "title": "The Expensive Mistake",
+      "description": "'How much could it possibly cost?' Famous last words. Lose $25,000. Roll a 5: lose $10,000 instead."
+    },
+    {
+      "id": "7383da1e-24b9-44ba-9960-e14ab65bfac5",
+      "title": "Oops, A Baby",
+      "description": "Positive! Probably! Add 1 child. Roll a 6: false alarm! No baby."
+    },
+    {
+      "id": "6b516eff-1ea7-423c-92ac-0c042bff4d31",
+      "title": "Unexpected Baby",
+      "description": "The family just got a little bigger. Add 1 child. Roll a 1: false alarm! No baby."
+    },
+    {
+      "id": "72178ee9-fd01-432c-858e-7e4206a1a04e",
+      "title": "Baby Fever",
+      "description": "You thought you were done. Apparently, your partner wasn't. Add 1 child. Roll a 2: you talked them out of it."
+    },
+    {
+      "id": "45f572cf-5cca-45db-a4a6-65e413ba8cc7",
+      "title": "Love at First Sight",
+      "description": "You met someone who doesn't immediately run away after hearing about your finances. Use once to get married any time."
+    },
+    {
+      "id": "d50f17ad-83d5-4a3d-b5f6-12102646aaa3",
+      "title": "The Big Question",
+      "description": "You popped the question. They said yes! Probably. Use once to get married any time."
+    },
+    {
+      "id": "ad6b19ba-168e-4247-8df0-8d01ef86dce3",
+      "title": "Cheater!",
+      "description": "Your partner catches you. Get divorced. Roll a 3: you went to counseling and worked it out."
+    },
+    {
+      "id": "e7c07999-757e-4b38-9345-c84dc96a9f05",
+      "title": "We Need to Talk",
+      "description": "You knew it wasn't going to be good when they started with those four words. Get divorced. Roll a 4: you work things out."
+    },
+    {
+      "id": "fe5e44d7-d253-4a2b-9883-a97420346678",
+      "title": "The Job Interview",
+      "description": "Somehow they didn't notice you have no idea what you're doing. Use once to get a career."
+    },
+    {
+      "id": "cefb1f99-ae47-4357-a960-e3d8c40f24db",
+      "title": "Right Place, Right Time",
+      "description": "Your friend knows a guy who knows a guy. Use once to get a career."
+    },
+    {
+      "id": "41f60213-f669-48fd-8e98-e25042ee62a9",
+      "title": "Layoffs!",
+      "description": "Corporate says you're 'part of the family.' Then they fire you. Lose your job this year. Roll a 5: you made the cut."
+    },
+    {
+      "id": "a251def7-194e-4be9-82aa-d3944d963f07",
+      "title": "Fired!",
+      "description": "'We're going in a different direction.' That direction apparently doesn't include you. Lose your job. Roll a 6: you talk your way out of it."
+    },
+    {
+      "id": "f27a6402-ba2f-412f-8588-7db146b52747",
+      "title": "Boss From Hell",
+      "description": "You finally snap after your boss sends another email marked 'URGENT.'. Lose your job for a year. Roll a 1: you tough it out."
+    },
+    {
+      "id": "44570ce7-493b-4923-af45-5cd79f111197",
+      "title": "The Company Closed",
+      "description": "Your workplace is gone. Unfortunately, so is your paycheck. Lose your job for a year. Roll a 2: you transfer to another location."
+    },
+    {
+      "id": "d9c078aa-5dfd-4424-8fe8-7b11dc64c7ee",
+      "title": "Monday Morning",
+      "description": "You wake up and realize you absolutely cannot do this job for another 30 years. Lose your job for a year. Roll a 3: coffee fixes everything."
+    },
+    {
+      "id": "1034efc3-523e-45e2-9850-8fb7290bbee1",
+      "title": "I Quit!",
+      "description": "You hand in your resignation with absolutely no plan whatsoever. Lose your job. Roll a 4: you realize you need the money and take it back."
+    },
+    {
+      "id": "bb954bb9-f9e5-4804-a32b-ba562029e7de",
+      "title": "Career Crisis",
+      "description": "You stare at your career and think, 'Is this really it?' Leave your career PERMANENTLY. Roll a 5: you decide to stick with it."
+    },
+    {
+      "id": "0a5f8a86-0fef-45f0-b997-ab7a0e942370",
+      "title": "Tripped",
+      "description": "You trip over a slightly raised piece of concrete. Your income this year. Roll a 6: 'Tis but a scratch.'"
+    },
+    {
+      "id": "6801715a-64b4-43fe-80a4-618b5d9a1e72",
+      "title": "Bad Luck",
+      "description": "You somehow manage to injure yourself doing something completely normal. You cannot work this year. Roll a 1: you're fine. Somehow."
+    },
+    {
+      "id": "8ea7187a-278a-46d1-878b-bcf5ee214f23",
+      "title": "Stay in Bed",
+      "description": "Nothing can happen if you stay in bed all year. Use once to get out of one event."
+    },
+    {
+      "id": "ed5738ba-b87d-456f-bbc2-5f4ae511cd4d",
+      "title": "Second Chance",
+      "description": "Pretend it never happened. Use once to get out of one event."
+    },
+    {
+      "id": "bdca6eec-6ee0-4a75-92e3-2223e4f7f2df",
+      "title": "Win a Car!",
+      "description": "Congratulations! You now own a vehicle you didn't pay for. Gain a car. Roll a 2: the dealership calls. It was a clerical error."
+    },
+    {
+      "id": "60ac547f-6fe8-4532-b25d-741d6def4bc8",
+      "title": "Car Giveaway",
+      "description": "You entered a contest for a car and somehow actually won. Gain a car. Roll a 3: you were the runner-up."
+    },
+    {
+      "id": "ffab0ed0-fcc5-4dc5-a92e-87cc0a5f0b14",
+      "title": "Car Theft",
+      "description": "You go outside and discover your car has gone on an unscheduled vacation. Lose your car. Roll a 4: you find it parked three blocks away."
+    },
+    {
+      "id": "815d47b7-67b9-49fe-b569-bdb7609e965e",
+      "title": "Car Crash",
+      "description": "You and your car had a disagreement with another vehicle. Lose your car. Roll a 5: it can be repaired."
+    },
+    {
+      "id": "0b05ae07-a085-435e-a1f7-5fffffafbdd9",
+      "title": "Engine Explodes",
+      "description": "Your car has decided it would rather be a very expensive lawn ornament. Lose your car. Roll a 6: who doesnt have an extra engine in there back yard."
+    },
+    {
+      "id": "9aa336de-c13a-41c4-ab9c-9a373cf61e93",
+      "title": "Where's My Car?",
+      "description": "You definitely parked it here... right? Lose your car. Roll a 1: you find it. You just forgot where you parked."
+    },
+    {
+      "id": "63c22cd4-2b17-4ce7-89d8-6046cc14f8c1",
+      "title": "The Mechanic",
+      "description": "'It's going to be cheaper to buy another car.' Lose your car. Roll a 2: It wasn't."
+    },
+    {
+      "id": "216ec44d-756b-437e-9141-7fb7e6d41c39",
+      "title": "Education Setback",
+      "description": "Your professor has discovered that you are, in fact, not finished. Education failed this year. Roll a 3: you convince them to let you finish."
+    },
+    {
+      "id": "c24e0d6f-04ce-4791-81e0-f7abe0217683",
+      "title": "Registration",
+      "description": "Problem: You missed an important deadline. Education failed this year. Roll a 4: they make an exception."
+    },
+    {
+      "id": "0ca8c38d-a269-4b40-a624-fbeb8c2bfbb3",
+      "title": "Scholarship!",
+      "description": "Someone looked at your tuition bill and decided to save you from it. Use for one free year of education."
+    },
+    {
+      "id": "f5e8e0bd-3595-4255-a57e-04becb1b956a",
+      "title": "Free Tuition",
+      "description": "Somehow, you found the magical phrase 'fully funded.'. Use for one free year of education."
+    },
+    {
+      "id": "3a2c248d-a771-4460-b6cc-6e00176b1359",
+      "title": "Bankruptcy",
+      "description": "You have officially entered financial 'oops.' Debt becomes $0, but you cannot buy a house or car for 3 years. Roll a 5: you dont qualify for bankruptcy."
+    },
+    {
+      "id": "9b721628-d5ef-4afa-b1b8-79127b721ba8",
+      "title": "Promotion!",
+      "description": "Your boss finally realizes that replacing you would be difficult. Income increases by $10,000/year. Roll a 6: your boss says 'maybe next year.'"
+    },
+    {
+      "id": "263a8c18-1966-49f5-9778-2e5e5d87555c",
+      "title": "Forced Sale",
+      "description": "The bank, circumstances, or life itself says it's time to move. Sell your house. Roll a 1: you manage to keep it."
+    },
+    {
+      "id": "cc779d06-238c-4444-bbfc-50fb94505b19",
+      "title": "Noticed Your Hard Work",
+      "description": "You've been doing your job well enough that someone finally noticed (yeah right). Income increases by $5,000/year. Roll a 2: your boss gives you a pizza party instead."
+    },
+    {
+      "id": "477ae9d6-bdb1-4add-a5b7-14c0859d028b",
+      "title": "The Brown-Noser",
+      "description": "You brought your boss coffee for 4,245 consecutive days. It worked. Income increases by $5,000/year. Roll a 3: your boss starts asking for cream and sugar too. No raise."
+    },
+    {
+      "id": "a0c67526-bd0c-4380-90c3-fa2d86cc02be",
+      "title": "House Flipper",
+      "description": "You sell your house at the perfect time. You can choose to sell your house and receive 110% of the equity."
+    }
+  ]
 }
