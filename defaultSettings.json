@@ -77,8 +77,8 @@
     },
     {
       "id": "9d040d30-bebb-415f-9730-a557aa359cf7",
-      "title": "Marriage income",
-      "description": "Married players increase their combined income by 25% (income x 1.25)."
+      "title": "Marriage",
+      "description": "Roll Even to get married. Married players increase their combined income by 10% (income x 1.10)."
     },
     {
       "id": "38dfb24a-a47e-472c-886f-9d81e72aa2f2",
@@ -150,11 +150,6 @@
       "title": "Divorce",
       "description": "If you divorce, lose 50% of your savings and $5,000."
     },
-    {
-      "id": "2141c9c2-0580-4eb1-a0f8-fb5cf4a24705",
-      "title": "Marriage",
-      "description": "Roll Even to get married."
-    }
   ],
   "events": [
     {
